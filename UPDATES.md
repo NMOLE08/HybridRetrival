@@ -18,3 +18,6 @@ This is a smoke-test pilot, not a paper-sized dataset: queries and labels are ag
 
 ## 2026-10-18 — Stage 03 complete
 Downloaded and verified the existing pretrained MiniLM model, recorded its revision and weight hash, and implemented deterministic CPU semantic search with cached document embeddings. An equivalent toy example and one development query produced stable rankings; the known source passage ranked first for that query. This is a smoke test, not a performance claim. Seven tests pass. Next: the TF-IDF baseline.
+
+## 2026-10-18 — Stage 04 complete
+Implemented and tested TF-IDF search on the same 31 passages as MiniLM. On the first development example both methods place the known source first but produce different lower-ranked results; this single query is not an overall comparison. Nine tests pass. Next: standard RRF hybrid retrieval.

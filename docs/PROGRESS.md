@@ -63,3 +63,14 @@
 - Risks: Small biased pilot and incomplete judgments; MiniLM truncates long inputs according to its model configuration; true latency will be measured later.
 - Next exact stage: Stage 04 TF-IDF baseline.
 - Commit: see Git history.
+
+### Stage 04 — Lexical TF-IDF baseline
+- Status: PASS.
+- Date/time: 2026-10-18 (Asia/Kolkata).
+- Work completed: Added corpus-only scikit-learn TF-IDF and cosine scoring with the same title/newline/text representation and result schema as dense retrieval; CLI supports lexical search. Default word tokenizer lowercases and splits hyphenated identifiers, a known limitation.
+- Files: src/iphr/lexical.py, cli.py, tests/test_lexical.py, outputs/examples/lexical_demo.json, outputs/manifests/stage_04.json.
+- Commands and tests: `python -m pytest -q` (9 passed); lexical CLI query and development smoke-test saved to lexical_demo.json. Exact-containing passage ranked first in unit test; OOV scores tie at zero and sort by ID; empty input rejected.
+- Baseline comparison: for dev01 both TF-IDF and the prior MiniLM example rank the known source first; their fourth and fifth results differ. This is one example, not a measured improvement or aggregate study.
+- Decisions / risks: Vectorizer fits only the corpus without qrels, default two-character word tokenization; test labels remain untouched. No broad effectiveness conclusions.
+- Next exact stage: Stage 05 standard RRF.
+- Commit: see Git history.

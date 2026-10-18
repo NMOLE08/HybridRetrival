@@ -1,0 +1,52 @@
+{
+  "query_id": "dev01",
+  "query": "What malicious xz library modification is described by CVE-2024-3094?",
+  "corpus_size": 31,
+  "vectorizer": "sklearn TfidfVectorizer defaults: word, lowercase, token pattern two or more word characters, l2 norm",
+  "index_build_seconds": 0.023904900008346885,
+  "lexical": [
+    {
+      "doc_id": "cve-2024-3094",
+      "title": "CVE-2024-3094",
+      "source_url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/f36061cc9d42937cd6a7a7321a89da7ef625a190/cves/2024/3xxx/CVE-2024-3094.json",
+      "rank": 1,
+      "score": 0.34020059575841166
+    },
+    {
+      "doc_id": "cve-2017-0144",
+      "title": "CVE-2017-0144",
+      "source_url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/f36061cc9d42937cd6a7a7321a89da7ef625a190/cves/2017/0xxx/CVE-2017-0144.json",
+      "rank": 2,
+      "score": 0.06871271019508166
+    },
+    {
+      "doc_id": "cve-2020-0601",
+      "title": "CVE-2020-0601",
+      "source_url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/f36061cc9d42937cd6a7a7321a89da7ef625a190/cves/2020/0xxx/CVE-2020-0601.json",
+      "rank": 3,
+      "score": 0.06624015741201467
+    },
+    {
+      "doc_id": "cve-2021-45046",
+      "title": "CVE-2021-45046",
+      "source_url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/f36061cc9d42937cd6a7a7321a89da7ef625a190/cves/2021/45xxx/CVE-2021-45046.json",
+      "rank": 4,
+      "score": 0.0534247503826968
+    },
+    {
+      "doc_id": "cve-2014-6271",
+      "title": "CVE-2014-6271",
+      "source_url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/f36061cc9d42937cd6a7a7321a89da7ef625a190/cves/2014/6xxx/CVE-2014-6271.json",
+      "rank": 5,
+      "score": 0.044332130099501654
+    }
+  ],
+  "dense_prior_stage_top5_ids": [
+    "cve-2024-3094",
+    "cve-2017-0144",
+    "cve-2020-0601",
+    "cve-2019-0708",
+    "cve-2023-4863"
+  ],
+  "note": "One development smoke-test only, not aggregate results."
+}

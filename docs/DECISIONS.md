@@ -25,3 +25,6 @@
 
 ## 2026-10-18 — Stage 03
 - Pinned official all-MiniLM-L6-v2 revision `1110a243fdf4706b3f48f1d95db1a4f5529b4d41`; verified the downloaded safetensors hash in the manifest. Normalized embeddings run on CPU; no training. Cache identity includes corpus content, model revision and library versions.
+
+## 2026-10-18 — Stage 04
+- Fix scikit-learn default word TF-IDF with L2 normalization. Tokenization splits hyphenated IDs and drops one-character tokens; do not silently alter the main baseline.

@@ -1,0 +1,7 @@
+{
+  "stage": "04",
+  "status": "PASS",
+  "tests": "9 passed; lexical CLI and development example run",
+  "comparison": "dev01 both lexical and dense rank the known source first; lower rankings differ",
+  "next": "05"
+}
