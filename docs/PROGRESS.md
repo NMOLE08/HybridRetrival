@@ -25,3 +25,16 @@
 - Risks: pip installation was unusually slow; full clean reinstall remains for Stage 12. Model and source availability remain untested.
 - Next exact stage: Stage 02 benchmark and provenance.
 - Commit hash: see Git history (stage checkpoint).
+
+### Stage 02 — Auditable benchmark (work in progress)
+- Status: PARTIAL; gate not met.
+- Date/time: 2026-10-18 (Asia/Kolkata).
+- Work completed: Inspected official CVE repository and rights notice; identified ten Espressif SoC source files with explicit `Apache-2.0 OR MIT` headers. Fetched 21 CVE records and 10 SoC header files at fixed commits into ignored local cache, recorded source URLs and SHA-256 hashes. Built a structural dataset validator and source fetcher. These source files are candidates, not a corpus or relevance judgments.
+- Files created/modified: scripts/collect_technical_corpus.py, scripts/validate_dataset.py, tests/test_source_discovery.py, tests/test_data_validation.py, outputs/manifests/source_discovery.json, UPDATES.md.
+- Commands: `.venv\Scripts\python.exe scripts\collect_technical_corpus.py`; `.venv\Scripts\python.exe scripts\validate_dataset.py data\technical`; `.venv\Scripts\python.exe -m pytest -q`.
+- Test results: collector fetched 31 records; pytest 3 passed. Validator correctly rejected the currently absent benchmark files. Initial pytest run encountered WinError 5 accessing an existing system temporary directory; changed test to avoid requiring that directory and reran successfully.
+- Measured results: none; no retrieval experiments run.
+- Decisions: CVE content is not assumed public domain; preserve applicable terms and copyright notices before redistributing. Espressif documentation license was not assumed from source-code notices; candidate source headers have explicit SPDX declarations. Candidate source list is exploratory and not a frozen benchmark.
+- Risks and unresolved problems: No curated passages, source-specific redistribution notices, relevance judgments, query split, near-duplicate audit, held-out hashes, or independent human review exist. The candidate records include code as well as technical vulnerability descriptions and require assessment for study suitability. Structural validation cannot confirm semantic correctness or exhaustive judgments.
+- Next exact action: Review source rights and 31 candidates; construct a small short-passage pilot and explicitly agent-authored dev/test queries; review every plausible positive and hard negative against evidence; complete provenance, freeze and hash the test split, and pass the Stage 02 validation and review gate before Stage 03.
+- Commit: see Git history for partial checkpoint.
