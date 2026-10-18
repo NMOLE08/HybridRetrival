@@ -22,3 +22,6 @@
 - The Log4j cross-reference was included as a second positive for test01 during dataset construction. Other pairs without explicit relevance assessments remain unjudged; the dataset does not establish complete relevance judgments.
 - Current CVE terms were inspected through the public website bundle and matched the archived license/disclaimer; the license, copyright designation, Espressif headers and MIT terms are included. UTF-8 LF is used for benchmark tabular files to keep their frozen byte hashes stable across Git checkouts.
 - Preserve frozen test files and source code design; do not use final labels to select or revise scoring rules.
+
+## 2026-10-18 — Stage 03
+- Pinned official all-MiniLM-L6-v2 revision `1110a243fdf4706b3f48f1d95db1a4f5529b4d41`; verified the downloaded safetensors hash in the manifest. Normalized embeddings run on CPU; no training. Cache identity includes corpus content, model revision and library versions.

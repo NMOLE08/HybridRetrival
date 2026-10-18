@@ -1,0 +1,13 @@
+{
+  "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+  "model_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "weights_sha256": "53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db",
+  "device": "cpu",
+  "embedding_dimension": 384,
+  "model_load_seconds": 1.4684220000053756,
+  "technical_corpus_hash": "a5dbae18ee8c3960de536122d29402b2b3e57026960994a24716b1a8a4a1f965",
+  "technical_cache_key": "dfc0805feb438196bd4a1c072a467c783f3a3a0ed2c566797270101bd3a0833c",
+  "technical_cache_hit": false,
+  "technical_preprocessing_seconds": 3.7790316000173334,
+  "note": "Initial local CPU run; timings are hardware-dependent. Cache and model weights are not committed."
+}

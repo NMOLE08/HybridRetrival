@@ -15,3 +15,6 @@ Located 31 candidate records from official CVE and Espressif repositories, pinne
 Built and froze a small, auditable benchmark: 31 source-derived passages, 6 development queries and 12 test queries. Source links, notices, hashes, judgments and evidence are included. A related Log4j record was correctly included as an additional positive instead of assuming only the source passage was relevant. Structural validation and five tests pass; rebuilding produces identical file hashes.
 
 This is a smoke-test pilot, not a paper-sized dataset: queries and labels are agent-created and have not received independent human review, and many document pairs are unjudged. The held-out test set must remain untouched until the scoring method and parameters are frozen. Next: Stage 03, reproduce pretrained MiniLM retrieval.
+
+## 2026-10-18 — Stage 03 complete
+Downloaded and verified the existing pretrained MiniLM model, recorded its revision and weight hash, and implemented deterministic CPU semantic search with cached document embeddings. An equivalent toy example and one development query produced stable rankings; the known source passage ranked first for that query. This is a smoke test, not a performance claim. Seven tests pass. Next: the TF-IDF baseline.

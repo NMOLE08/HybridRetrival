@@ -1,0 +1,96 @@
+{
+  "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+  "model_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "weights_sha256": "53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db",
+  "device": "cpu",
+  "embedding_dimension": 384,
+  "model_load_seconds": 1.4684220000053756,
+  "technical_corpus_hash": "a5dbae18ee8c3960de536122d29402b2b3e57026960994a24716b1a8a4a1f965",
+  "technical_cache_key": "dfc0805feb438196bd4a1c072a467c783f3a3a0ed2c566797270101bd3a0833c",
+  "technical_cache_hit": false,
+  "technical_preprocessing_seconds": 3.7790316000173334,
+  "toy": {
+    "query": "How do neural networks learn?",
+    "results": [
+      {
+        "doc_id": "toy-00",
+        "title": "",
+        "source_url": "synthetic toy example",
+        "rank": 1,
+        "score": 0.7604312896728516
+      },
+      {
+        "doc_id": "toy-02",
+        "title": "",
+        "source_url": "synthetic toy example",
+        "rank": 2,
+        "score": 0.5375841856002808
+      },
+      {
+        "doc_id": "toy-01",
+        "title": "",
+        "source_url": "synthetic toy example",
+        "rank": 3,
+        "score": 0.3403507471084595
+      },
+      {
+        "doc_id": "toy-07",
+        "title": "",
+        "source_url": "synthetic toy example",
+        "rank": 4,
+        "score": 0.11301520466804504
+      },
+      {
+        "doc_id": "toy-06",
+        "title": "",
+        "source_url": "synthetic toy example",
+        "rank": 5,
+        "score": 0.10044923424720764
+      }
+    ],
+    "preprocessing_seconds": 0.12100939999800175
+  },
+  "development_example": {
+    "query_id": "dev01",
+    "query": "What malicious xz library modification is described by CVE-2024-3094?",
+    "results": [
+      {
+        "doc_id": "cve-2024-3094",
+        "title": "CVE-2024-3094",
+        "source_url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/f36061cc9d42937cd6a7a7321a89da7ef625a190/cves/2024/3xxx/CVE-2024-3094.json",
+        "rank": 1,
+        "score": 0.8421674966812134
+      },
+      {
+        "doc_id": "cve-2017-0144",
+        "title": "CVE-2017-0144",
+        "source_url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/f36061cc9d42937cd6a7a7321a89da7ef625a190/cves/2017/0xxx/CVE-2017-0144.json",
+        "rank": 2,
+        "score": 0.4875892400741577
+      },
+      {
+        "doc_id": "cve-2020-0601",
+        "title": "CVE-2020-0601",
+        "source_url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/f36061cc9d42937cd6a7a7321a89da7ef625a190/cves/2020/0xxx/CVE-2020-0601.json",
+        "rank": 3,
+        "score": 0.47064173221588135
+      },
+      {
+        "doc_id": "cve-2019-0708",
+        "title": "CVE-2019-0708",
+        "source_url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/f36061cc9d42937cd6a7a7321a89da7ef625a190/cves/2019/0xxx/CVE-2019-0708.json",
+        "rank": 4,
+        "score": 0.45054545998573303
+      },
+      {
+        "doc_id": "cve-2023-4863",
+        "title": "CVE-2023-4863",
+        "source_url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/f36061cc9d42937cd6a7a7321a89da7ef625a190/cves/2023/4xxx/CVE-2023-4863.json",
+        "rank": 5,
+        "score": 0.42657244205474854
+      }
+    ],
+    "repeat_order_identical": true
+  },
+  "note": "Pretrained model inference only; no training. Toy texts are synthetic and are not benchmark evidence."
+}

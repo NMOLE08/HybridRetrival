@@ -50,3 +50,16 @@
 - Decisions / limitations: Pilot below paper target; agent-authored, source-conditioned queries and non-independent labels; source code snippets in addition to prose. Exact corpus coverage does not prove all relevant judgments have been found; unjudged pairs are not treated as explicit negatives. CVE current terms were checked in site bundle and notices included. The plan's human-origin-only schema was extended with `agent_authored` to avoid misrepresentation.
 - Next exact stage: Stage 03 pretrained MiniLM semantic baseline; test split and qrels remain frozen and unused for model/rule design or tuning.
 - Commit hash: see Git history for Stage 02 freeze checkpoint.
+
+### Stage 03 — Pretrained MiniLM semantic baseline
+- Status: PASS.
+- Date/time: 2026-10-18 (Asia/Kolkata).
+- Work completed: Implemented CPU sentence-transformer retrieval with normalized document/query embeddings, stable doc_id ties, corpus/model/library-version keyed cache and search CLI. Loaded the unmodified pretrained model, ran an equivalent nine-sentence synthetic toy and one development query twice; no training or final-test labels used.
+- Files: src/iphr/dense.py, data_io.py, cli.py, scripts/dense_demo.py, tests/test_dense.py, outputs/examples/dense_demo.json, outputs/manifests/dense_cache.json and stage_03.json.
+- Commands: `python scripts/dense_demo.py`; `python -m iphr.cli search --query <dev-query> --method dense --top-k 5`; `python -m pytest -q`.
+- Test results: 7 passed. Nine-sentence toy returned unique ranked IDs; repeated development query order matched in-process and in separate CLI execution.
+- Measured results: dimension 384; initial local cached-model load 1.468 s and technical preprocessing 3.779 s on CPU (single run, not a latency benchmark). Development query dev01 ranked its known source passage first. No prior retrieval baseline exists yet and this example is not aggregate evidence.
+- Decisions: Model revision and safetensors SHA-256 recorded in dense_cache.json; cache is ignored. Model fetch used public unauthenticated access; Windows symlink warning did not prevent download.
+- Risks: Small biased pilot and incomplete judgments; MiniLM truncates long inputs according to its model configuration; true latency will be measured later.
+- Next exact stage: Stage 04 TF-IDF baseline.
+- Commit: see Git history.
