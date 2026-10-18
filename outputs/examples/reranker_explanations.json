@@ -1,0 +1,385 @@
+[
+  {
+    "query_id": "dev04",
+    "query": "Which SPI and UART peripheral counts are specified for ESP32-C2?",
+    "illustrative_weights": {
+      "lambda_match": 0.003,
+      "lambda_conflict": 0.003
+    },
+    "top5": [
+      {
+        "doc_id": "esp32c2",
+        "rank": 1,
+        "score": 0.03500204813108039,
+        "explanation": {
+          "query_identifiers": [
+            {
+              "canonical": "ESP32-C2",
+              "family": "esp32",
+              "variant": "ESP32-C2",
+              "start": 55,
+              "end": 63,
+              "source": "ESP32-C2"
+            }
+          ],
+          "document_identifiers": [
+            {
+              "canonical": "ESP32-C2",
+              "family": "esp32",
+              "variant": "ESP32-C2",
+              "start": 0,
+              "end": 8,
+              "source": "ESP32-C2"
+            }
+          ],
+          "matched_identifiers": [
+            "ESP32-C2"
+          ],
+          "match_fraction": 1.0,
+          "conflict_families": [],
+          "conflict": false,
+          "rrf_score": 0.03200204813108039,
+          "match_bonus": 0.003,
+          "conflict_penalty": 0.0,
+          "final_score": 0.03500204813108039
+        }
+      },
+      {
+        "doc_id": "cve-2021-34527",
+        "rank": 2,
+        "score": 0.02921395544346364,
+        "explanation": {
+          "query_identifiers": [
+            {
+              "canonical": "ESP32-C2",
+              "family": "esp32",
+              "variant": "ESP32-C2",
+              "start": 55,
+              "end": 63,
+              "source": "ESP32-C2"
+            }
+          ],
+          "document_identifiers": [
+            {
+              "canonical": "CVE-2021-34527",
+              "family": "cve",
+              "variant": "CVE-2021-34527",
+              "start": 0,
+              "end": 14,
+              "source": "CVE-2021-34527"
+            }
+          ],
+          "matched_identifiers": [],
+          "match_fraction": 0.0,
+          "conflict_families": [],
+          "conflict": false,
+          "rrf_score": 0.02921395544346364,
+          "match_bonus": 0.0,
+          "conflict_penalty": 0.0,
+          "final_score": 0.02921395544346364
+        }
+      },
+      {
+        "doc_id": "cve-2020-1472",
+        "rank": 3,
+        "score": 0.028814262023217248,
+        "explanation": {
+          "query_identifiers": [
+            {
+              "canonical": "ESP32-C2",
+              "family": "esp32",
+              "variant": "ESP32-C2",
+              "start": 55,
+              "end": 63,
+              "source": "ESP32-C2"
+            }
+          ],
+          "document_identifiers": [
+            {
+              "canonical": "CVE-2020-1472",
+              "family": "cve",
+              "variant": "CVE-2020-1472",
+              "start": 0,
+              "end": 13,
+              "source": "CVE-2020-1472"
+            }
+          ],
+          "matched_identifiers": [],
+          "match_fraction": 0.0,
+          "conflict_families": [],
+          "conflict": false,
+          "rrf_score": 0.028814262023217248,
+          "match_bonus": 0.0,
+          "conflict_penalty": 0.0,
+          "final_score": 0.028814262023217248
+        }
+      },
+      {
+        "doc_id": "esp32",
+        "rank": 4,
+        "score": 0.02813852813852814,
+        "explanation": {
+          "query_identifiers": [
+            {
+              "canonical": "ESP32-C2",
+              "family": "esp32",
+              "variant": "ESP32-C2",
+              "start": 55,
+              "end": 63,
+              "source": "ESP32-C2"
+            }
+          ],
+          "document_identifiers": [
+            {
+              "canonical": "ESP32",
+              "family": "esp32",
+              "variant": null,
+              "start": 0,
+              "end": 5,
+              "source": "ESP32"
+            }
+          ],
+          "matched_identifiers": [],
+          "match_fraction": 0.0,
+          "conflict_families": [],
+          "conflict": false,
+          "rrf_score": 0.02813852813852814,
+          "match_bonus": 0.0,
+          "conflict_penalty": 0.0,
+          "final_score": 0.02813852813852814
+        }
+      },
+      {
+        "doc_id": "cve-2021-45046",
+        "rank": 5,
+        "score": 0.027730294396961064,
+        "explanation": {
+          "query_identifiers": [
+            {
+              "canonical": "ESP32-C2",
+              "family": "esp32",
+              "variant": "ESP32-C2",
+              "start": 55,
+              "end": 63,
+              "source": "ESP32-C2"
+            }
+          ],
+          "document_identifiers": [
+            {
+              "canonical": "CVE-2021-45046",
+              "family": "cve",
+              "variant": "CVE-2021-45046",
+              "start": 0,
+              "end": 14,
+              "source": "CVE-2021-45046"
+            },
+            {
+              "canonical": "CVE-2021-44228",
+              "family": "cve",
+              "variant": "CVE-2021-44228",
+              "start": 52,
+              "end": 66,
+              "source": "CVE-2021-44228"
+            }
+          ],
+          "matched_identifiers": [],
+          "match_fraction": 0.0,
+          "conflict_families": [],
+          "conflict": false,
+          "rrf_score": 0.027730294396961064,
+          "match_bonus": 0.0,
+          "conflict_penalty": 0.0,
+          "final_score": 0.027730294396961064
+        }
+      }
+    ],
+    "baseline_top5": [
+      "esp32c2",
+      "esp32p4",
+      "esp32s2",
+      "cve-2021-34527",
+      "cve-2020-1472"
+    ],
+    "full_order_unchanged": false
+  },
+  {
+    "query_id": "dev06",
+    "query": "Which Windows certificate validation flaw can make a malicious executable appear signed by a trusted source?",
+    "illustrative_weights": {
+      "lambda_match": 0.003,
+      "lambda_conflict": 0.003
+    },
+    "top5": [
+      {
+        "doc_id": "cve-2020-0601",
+        "rank": 1,
+        "score": 0.03278688524590164,
+        "explanation": {
+          "query_identifiers": [],
+          "document_identifiers": [
+            {
+              "canonical": "CVE-2020-0601",
+              "family": "cve",
+              "variant": "CVE-2020-0601",
+              "start": 0,
+              "end": 13,
+              "source": "CVE-2020-0601"
+            }
+          ],
+          "matched_identifiers": [],
+          "match_fraction": 0.0,
+          "conflict_families": [],
+          "conflict": false,
+          "rrf_score": 0.03278688524590164,
+          "match_bonus": 0.0,
+          "conflict_penalty": 0.0,
+          "final_score": 0.03278688524590164
+        }
+      },
+      {
+        "doc_id": "cve-2017-0144",
+        "rank": 2,
+        "score": 0.03225806451612903,
+        "explanation": {
+          "query_identifiers": [],
+          "document_identifiers": [
+            {
+              "canonical": "CVE-2017-0144",
+              "family": "cve",
+              "variant": "CVE-2017-0144",
+              "start": 0,
+              "end": 13,
+              "source": "CVE-2017-0144"
+            },
+            {
+              "canonical": "CVE-2017-0143",
+              "family": "cve",
+              "variant": "CVE-2017-0143",
+              "start": 419,
+              "end": 432,
+              "source": "CVE-2017-0143"
+            },
+            {
+              "canonical": "CVE-2017-0145",
+              "family": "cve",
+              "variant": "CVE-2017-0145",
+              "start": 434,
+              "end": 447,
+              "source": "CVE-2017-0145"
+            },
+            {
+              "canonical": "CVE-2017-0146",
+              "family": "cve",
+              "variant": "CVE-2017-0146",
+              "start": 449,
+              "end": 462,
+              "source": "CVE-2017-0146"
+            },
+            {
+              "canonical": "CVE-2017-0148",
+              "family": "cve",
+              "variant": "CVE-2017-0148",
+              "start": 468,
+              "end": 481,
+              "source": "CVE-2017-0148"
+            }
+          ],
+          "matched_identifiers": [],
+          "match_fraction": 0.0,
+          "conflict_families": [],
+          "conflict": false,
+          "rrf_score": 0.03225806451612903,
+          "match_bonus": 0.0,
+          "conflict_penalty": 0.0,
+          "final_score": 0.03225806451612903
+        }
+      },
+      {
+        "doc_id": "cve-2022-30190",
+        "rank": 3,
+        "score": 0.03149801587301587,
+        "explanation": {
+          "query_identifiers": [],
+          "document_identifiers": [
+            {
+              "canonical": "CVE-2022-30190",
+              "family": "cve",
+              "variant": "CVE-2022-30190",
+              "start": 0,
+              "end": 14,
+              "source": "CVE-2022-30190"
+            }
+          ],
+          "matched_identifiers": [],
+          "match_fraction": 0.0,
+          "conflict_families": [],
+          "conflict": false,
+          "rrf_score": 0.03149801587301587,
+          "match_bonus": 0.0,
+          "conflict_penalty": 0.0,
+          "final_score": 0.03149801587301587
+        }
+      },
+      {
+        "doc_id": "cve-2024-3094",
+        "rank": 4,
+        "score": 0.030798389007344232,
+        "explanation": {
+          "query_identifiers": [],
+          "document_identifiers": [
+            {
+              "canonical": "CVE-2024-3094",
+              "family": "cve",
+              "variant": "CVE-2024-3094",
+              "start": 0,
+              "end": 13,
+              "source": "CVE-2024-3094"
+            }
+          ],
+          "matched_identifiers": [],
+          "match_fraction": 0.0,
+          "conflict_families": [],
+          "conflict": false,
+          "rrf_score": 0.030798389007344232,
+          "match_bonus": 0.0,
+          "conflict_penalty": 0.0,
+          "final_score": 0.030798389007344232
+        }
+      },
+      {
+        "doc_id": "cve-2021-34527",
+        "rank": 5,
+        "score": 0.030303030303030304,
+        "explanation": {
+          "query_identifiers": [],
+          "document_identifiers": [
+            {
+              "canonical": "CVE-2021-34527",
+              "family": "cve",
+              "variant": "CVE-2021-34527",
+              "start": 0,
+              "end": 14,
+              "source": "CVE-2021-34527"
+            }
+          ],
+          "matched_identifiers": [],
+          "match_fraction": 0.0,
+          "conflict_families": [],
+          "conflict": false,
+          "rrf_score": 0.030303030303030304,
+          "match_bonus": 0.0,
+          "conflict_penalty": 0.0,
+          "final_score": 0.030303030303030304
+        }
+      }
+    ],
+    "baseline_top5": [
+      "cve-2020-0601",
+      "cve-2017-0144",
+      "cve-2022-30190",
+      "cve-2024-3094",
+      "cve-2021-34527"
+    ],
+    "full_order_unchanged": true
+  }
+]

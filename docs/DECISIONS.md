@@ -34,3 +34,6 @@
 
 ## 2026-10-18 — Stage 06
 - Support only explicit CVEs and ESP32 model variants of C/S/H/P plus numeric suffix; IEEE 802.11 is outside this pilot. Deduplicate repeated canonical IDs, preserve first original span. A same-family conflict requires explicit variants on both sides and no requested variant from that family in the document. The generic ESP32 alone never constitutes an explicit wrong variant.
+
+## 2026-10-18 — Stage 07
+- Match fraction uses distinct canonical query IDs; conflict is a binary indicator of at least one explicitly contradictory family. Scores are directly adjusted without global normalization. For identifier-free queries retain original order and exact scores. Example weights are illustrative, not selected settings.

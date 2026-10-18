@@ -27,3 +27,6 @@ Implemented and hand-checked standard RRF hybrid retrieval. Saved all three base
 
 ## 2026-10-18 — Stage 06 complete
 Added and tested identifier extraction for CVEs and ESP32 variants, including Unicode dashes, original text spans, generic-vs-variant distinction, and conservative same-family conflicts. Fourteen tests pass. This stage changes no rankings. Next: the explainable scoring adjustment.
+
+## 2026-10-18 — Stage 07 complete
+Added the proposed explainable match bonus and optional conflict penalty over RRF. Tests confirm identifier-free queries retain the exact baseline scores and order, and explanations reproduce the adjusted score. Seventeen tests pass; example weights are illustrative and have not been tuned. Next: evaluation metrics.

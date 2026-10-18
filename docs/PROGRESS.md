@@ -97,3 +97,14 @@
 - Decisions / limitations: IEEE Wi-Fi identifiers and arbitrary devices are not supported; parser does not infer identifiers. Family-level handling deliberately avoids conflict for a multi-ID query when at least one requested ID of that family occurs. Generic ID matching is distinct from variant matching.
 - Next exact stage: Stage 07 identifier-aware score adjustment.
 - Commit: see Git history.
+
+### Stage 07 — Identifier-aware reranker
+- Status: PASS.
+- Date/time: 2026-10-18 (Asia/Kolkata).
+- Work completed: Added explainable RRF + match-fraction bonus − same-family conflict penalty, with independently selectable nonnegative weights. Explanation records extracted identifiers, match fraction, conflict, base score and score components. Relevance labels never enter the scorer.
+- Files: src/iphr/reranker.py, tests/test_reranker.py, outputs/examples/reranker_explanations.json, outputs/manifests/stage_07.json.
+- Commands/tests: `python -m pytest -q` (17 passed); generated two dev-only explanations using illustrative 0.003 weights. Positive, confusable, generic, multiple-ID and natural-query cases verified.
+- Baseline comparison: for dev04 the illustrative adjustment changes the RRF full order; for identifier-free dev06 it preserves the entire RRF ordering. This is a functional demonstration, not parameter selection or an effectiveness claim.
+- Decisions / risks: Weights in the example are illustrative; no hyperparameters selected. Family-level conflicts are deliberately conservative. Test labels remain held out.
+- Next exact stage: Stage 08 metrics and evaluation infrastructure.
+- Commit: see Git history.

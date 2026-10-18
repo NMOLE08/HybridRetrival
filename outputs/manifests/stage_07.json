@@ -1,0 +1,7 @@
+{
+  "stage": "07",
+  "status": "PASS",
+  "tests": "17 passed; illustrative dev explanations; natural-query order and scores unchanged",
+  "next": "08",
+  "weights": "illustrative only; not selected"
+}
