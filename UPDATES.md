@@ -36,3 +36,6 @@ Implemented and tested retrieval metrics, paired confidence-interval machinery, 
 
 ## 2026-10-18 — Stage 09 complete
 Ran the predeclared development grid and froze the configuration. All 12 settings tied on the selected metrics; the conservative rule selected zero bonus and zero penalty, so the primary proposed method will be identical to RRF. Before looking at test results, also recorded a fixed nonzero exploratory sensitivity comparison to show how the adjustment behaves. The test split remains held out; 21 tests pass. Next: one frozen held-out evaluation.
+
+## 2026-10-18 — Stage 10 primary run complete; secondary check in progress
+Ran all frozen methods on 12 held-out pilot queries and repeated each ranking successfully. The primary selected method is identical to RRF by design. On the 10 identifier queries, RRF and the selected method each have MRR@10 0.875 and Recall@5 1.0; wrong-ID outcomes are 1 observed, 1 unknown, out of 10 eligible. The nonzero sensitivity setting is exploratory and must not be confused with the selected method. Saved raw results and reconstructed metrics independently. The optional SciFact archive is available and checksum-verified; its CPU evaluation is being prepared.

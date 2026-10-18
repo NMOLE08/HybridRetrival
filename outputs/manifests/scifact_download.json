@@ -1,0 +1,13 @@
+{
+  "source": "https://public.ukp.informatik.tu-darmstadt.de/thakur/BEIR/datasets/scifact.zip",
+  "published_md5": "5f7d1de60b170fc8027bb7898e2efca1",
+  "md5": "5f7d1de60b170fc8027bb7898e2efca1",
+  "sha256": "536e14446a0ba56ed1398ab1055f39fe852686ecad24a6306c80c490fa8e0165",
+  "dataset_license": "CC BY-SA 4.0 per BeIR/scifact dataset card",
+  "license_source": "https://huggingface.co/datasets/BeIR/scifact",
+  "files": {
+    "corpus.jsonl": "dec31c8182f3d744c7d2c09423756fd1d17cbef75808db13ba01cc0aab4d1ac6",
+    "queries.jsonl": "8ff84a7c903f722981cd8d595c022660140c51867b27608a6d4910db86080313",
+    "qrels/test.tsv": "0864bb985e0ca2367ba217977e72004d549054b2b06666ed9d4825ac7c21284c"
+  }
+}

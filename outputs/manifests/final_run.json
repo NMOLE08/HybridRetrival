@@ -1,0 +1,32 @@
+{
+  "config_sha256": "834a5e7781ad996e4f08799f43feb1e274376c53232b4ae914ac9a44f6918193",
+  "dataset_summary_sha256": "263bc0a8e7e3dd241d6a47d94f857fc3eb0722f3aa43d5ffd40fb09410e49c87",
+  "query_sha256": "6c213d02451e013acdb16ba506d24af2b00c8f79eadf67ae52f905f52f14823e",
+  "qrels_sha256": "8dc288044e4a561ff4004a77d2ff3de51f540d06347e8b12ab938eb196fe2f3e",
+  "git_commit": "080b8aba659bf8885bdb954e19ff73cbef106911",
+  "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+  "model_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "model_weights_sha256": "53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db",
+  "corpus_hash": "a5dbae18ee8c3960de536122d29402b2b3e57026960994a24716b1a8a4a1f965",
+  "device": "cpu",
+  "seed": 42,
+  "queries": 12,
+  "ranking_rows": 2604,
+  "repeat_checks_passed": [
+    "test01",
+    "test02",
+    "test03",
+    "test04",
+    "test05",
+    "test06",
+    "test07",
+    "test08",
+    "test09",
+    "test10",
+    "test11",
+    "test12"
+  ],
+  "parser_coverage_count": 10,
+  "environment_manifest": "outputs/manifests/environment.json",
+  "note": "Fixed nonzero variants are exploratory; selected primary configuration is the dev-frozen no-op."
+}

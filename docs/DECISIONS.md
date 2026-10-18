@@ -43,3 +43,7 @@
 
 ## 2026-10-18 — Stage 09
 - All 12 grid settings tied on selected development metrics, so the prespecified conservative rule selects (0, 0), making primary proposed scores identical to RRF. Before test evaluation, added fixed smallest nonzero grid values (0.003, 0.003) as an explicitly exploratory sensitivity contrast, not a replacement for the selected setting. No test ranks or metrics were viewed.
+
+## 2026-10-18 — Stage 10 primary run
+- Completed held-out rankings with the frozen no-op primary and the previously specified nonzero exploratory variants. Test ranks were repeated before judgments were read; metrics were reconstructed independently. No scorer or parameter changes were made. SciFact secondary check is in progress.
+- BEIR SciFact download initially failed certificate verification with Python default TLS; using the installed truststore package with the OS certificate store succeeded without disabling TLS verification. The archive matches the BEIR published MD5.

@@ -1,0 +1,35 @@
+{
+  "samples": 36,
+  "unit": "ms",
+  "conditions": "Three component timings per query after its first warm pass; sequential CPU; components are timed separately, not end-to-end.",
+  "lexical_index_build_seconds": 0.021713900001486763,
+  "model_load_seconds": 18.14187399999355,
+  "embedding_cache_load_or_build_seconds": 0.006538599991472438,
+  "embedding_cache_hit": true,
+  "components": {
+    "lexical_ms": {
+      "median": 1.5855000000000001,
+      "p95": 1.7545
+    },
+    "query_embedding_ms": {
+      "median": 24.723300000000002,
+      "p95": 27.107725000000002
+    },
+    "dense_rank_ms": {
+      "median": 0.11605,
+      "p95": 0.14625
+    },
+    "rrf_fusion_ms": {
+      "median": 0.1076,
+      "p95": 0.123575
+    },
+    "selected_rerank_ms": {
+      "median": 3.09875,
+      "p95": 3.499675
+    },
+    "fixed_rerank_ms": {
+      "median": 3.037,
+      "p95": 3.5655
+    }
+  }
+}
