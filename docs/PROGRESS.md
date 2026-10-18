@@ -11,4 +11,17 @@
 - Decisions: CPU; no training; technical primary, optional SciFact; development-only selection; prior art not claimed as novel.
 - Risks: Human independent review unavailable so far; dataset sourcing and model download remain unverified.
 - Next exact stage: Stage 01 reproducible workspace.
-- Commit hash: unavailable at this stage; Git not initialized and no user identity configured.
+- Commit hash: 5044286 (Git initialized subsequently with a local Codex checkpoint author).
+
+### Stage 01 — Reproducible Python workspace
+- Status: PASS (workspace gate); model download and deterministic ranking are validated at their implementation stages.
+- Date/time: 2026-10-18 (Asia/Kolkata)
+- Work completed: Initialized Git and virtual environment; installed package and dependencies; documented PowerShell/Bash setup and recorded dependency/environment snapshot. CPU and seed defaults are configured.
+- Files created/modified: pyproject.toml, README.md, .gitignore, configs/base.yaml, src/iphr/, tests/test_smoke.py, requirements.lock.txt, outputs/manifests/environment.json, docs/IMPLEMENTATION_PLAN.md, UPDATES.md.
+- Commands: `python -m venv .venv`; `.venv\Scripts\python.exe -m pip install -e '.[dev]'`; `python -m pip freeze`; imports of all declared dependencies; `python -m iphr.cli --help`.
+- Test: `.venv\Scripts\python.exe -m pytest -q` — 1 passed; CLI help and all imports succeeded; sentence-transformers 5.7.0 and torch 2.14.1+cpu imported.
+- Measured results: no retrieval measurements.
+- Decisions / deviations: Snapshot excludes the local editable install path. Git uses a local Codex author because user identity is unset; no global Git settings changed. Model loading and ranking error handling cannot be verified until Stage 03.
+- Risks: pip installation was unusually slow; full clean reinstall remains for Stage 12. Model and source availability remain untested.
+- Next exact stage: Stage 02 benchmark and provenance.
+- Commit hash: see Git history (stage checkpoint).
