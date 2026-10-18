@@ -1,0 +1,11 @@
+{
+  "stage": "09",
+  "status": "PASS",
+  "selected_match": 0.0,
+  "selected_conflict": 0.0,
+  "fixed_exploratory_match": 0.003,
+  "fixed_exploratory_conflict": 0.003,
+  "tests": "21 passed; full grid and natural invariance",
+  "next": "10",
+  "note": "Exploratory sensitivity frozen before test evaluation"
+}

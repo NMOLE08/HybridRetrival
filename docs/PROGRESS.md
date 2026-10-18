@@ -120,3 +120,15 @@
 - Risks: Incomplete qrels and tiny per-group samples severely limit confidence interval and error-rate interpretation. No test tuning or model training.
 - Next exact stage: Stage 09 development-only grid and parameter freeze.
 - Commit: see Git history.
+
+### Stage 09 — Development-only grid and freeze
+- Status: PASS.
+- Date/time: 2026-10-18 (Asia/Kolkata).
+- Work completed: Evaluated 12 predeclared weight pairs on the six dev queries, verified identifier-free invariance at every pair, applied the predeclared tie-break, and froze config and hashes before any test evaluation. Saved development rankings, per-query metrics, group summaries and grid.
+- Files: scripts/run_dev_grid.py, configs/final.yaml, outputs/dev/grid.csv, rankings.csv, per_query.csv, metrics.json, outputs/manifests/dev_freeze.json and stage_09.json.
+- Commands/tests: `python scripts/run_dev_grid.py`; `python -m pytest -q` (21 passed). Test files checked by SHA-256 only.
+- Measured dev results: On five identifier queries, RRF MRR@10 = 1.0 and Recall@5 = 1.0, wrong-ID upper bound = 0/5. All 12 weight pairs tie on these selection metrics; conservative tie-break chooses lambda_match = 0 and lambda_conflict = 0. Thus the selected proposed scorer is a no-op; no gain can be inferred.
+- Decision: Before test evaluation, also freeze the smallest nonzero grid weights (0.003, 0.003) for explicitly exploratory match-only and match+penalty sensitivity contrasts. The selected no-op remains the primary method. This exploratory addition was made after observing the dev tie and must not be represented as an independent confirmatory test.
+- Risks: Only five identifier dev queries and one natural query; perfect dev scores and agent-created labels give no basis to infer generalization.
+- Next exact stage: Stage 10 held-out evaluation using this committed config and implementation.
+- Commit: see Git history for the config freeze commit.

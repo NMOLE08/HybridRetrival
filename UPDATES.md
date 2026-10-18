@@ -33,3 +33,6 @@ Added the proposed explainable match bonus and optional conflict penalty over RR
 
 ## 2026-10-18 — Stage 08 complete
 Implemented and tested retrieval metrics, paired confidence-interval machinery, timing support, and reconstruction of metrics from saved rankings. Wrong-identifier errors require an explicit negative judgment; unjudged contradictory results are reported as unknown with bounds. Twenty-one tests pass. Next: select weights using the development set only.
+
+## 2026-10-18 — Stage 09 complete
+Ran the predeclared development grid and froze the configuration. All 12 settings tied on the selected metrics; the conservative rule selected zero bonus and zero penalty, so the primary proposed method will be identical to RRF. Before looking at test results, also recorded a fixed nonzero exploratory sensitivity comparison to show how the adjustment behaves. The test split remains held out; 21 tests pass. Next: one frozen held-out evaluation.

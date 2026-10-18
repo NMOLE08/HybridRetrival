@@ -1,0 +1,15 @@
+candidate_policy: full_corpus
+device: cpu
+exploratory_lambda_conflict: 0.003
+exploratory_lambda_match: 0.003
+exploratory_note: fixed smallest nonzero grid values; sensitivity only, not the selected
+  method
+lambda_conflict: 0.0
+lambda_match: 0.0
+model: sentence-transformers/all-MiniLM-L6-v2
+model_revision: 1110a243fdf4706b3f48f1d95db1a4f5529b4d41
+rrf_k: 60
+seed: 42
+selection_rule: maximize identifier MRR@10; minimize wrong-ID upper bound; maximize
+  Recall@5; minimize sum, match, conflict
+selection_split: dev

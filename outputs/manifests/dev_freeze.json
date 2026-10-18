@@ -1,0 +1,18 @@
+{
+  "config_sha256": "834a5e7781ad996e4f08799f43feb1e274376c53232b4ae914ac9a44f6918193",
+  "test_query_sha256": "6c213d02451e013acdb16ba506d24af2b00c8f79eadf67ae52f905f52f14823e",
+  "test_qrels_sha256": "8dc288044e4a561ff4004a77d2ff3de51f540d06347e8b12ab938eb196fe2f3e",
+  "selection_rule": "maximize identifier MRR@10; minimize wrong-ID upper bound; maximize Recall@5; minimize sum, match, conflict",
+  "selected": {
+    "lambda_match": 0.0,
+    "lambda_conflict": 0.0,
+    "identifier_mrr_at_10": 1.0,
+    "identifier_wrong_upper": 0.0,
+    "identifier_wrong_count": 0,
+    "identifier_unknown_count": 0,
+    "identifier_recall_at_5": 1.0,
+    "selected": true
+  },
+  "pre_freeze_git_head": "6a66481acba76d26b32d9a30cfb9c3441d904b65",
+  "note": "Selection uses development judgments only; test files checked by hash, not evaluated."
+}

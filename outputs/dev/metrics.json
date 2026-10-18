@@ -1,0 +1,651 @@
+{
+  "dataset": "technical",
+  "split": "dev",
+  "methods": {
+    "minilm": {
+      "all": {
+        "n_queries": 6,
+        "recall_at_5": 1.0,
+        "mrr_at_10": 0.8888888888888888,
+        "ndcg_at_10": 0.9166666666666666,
+        "wrong_id_at_1": {
+          "eligible": 5,
+          "wrong": 0,
+          "unknown": 1,
+          "adjudicated": 4,
+          "lower_bound": 0.0,
+          "upper_bound": 0.2,
+          "rate_among_known": 0.0
+        }
+      },
+      "family:cve": {
+        "n_queries": 3,
+        "recall_at_5": 1.0,
+        "mrr_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "wrong_id_at_1": {
+          "eligible": 3,
+          "wrong": 0,
+          "unknown": 0,
+          "adjudicated": 3,
+          "lower_bound": 0.0,
+          "upper_bound": 0.0,
+          "rate_among_known": 0.0
+        }
+      },
+      "family:esp32": {
+        "n_queries": 2,
+        "recall_at_5": 1.0,
+        "mrr_at_10": 0.6666666666666666,
+        "ndcg_at_10": 0.75,
+        "wrong_id_at_1": {
+          "eligible": 2,
+          "wrong": 0,
+          "unknown": 1,
+          "adjudicated": 1,
+          "lower_bound": 0.0,
+          "upper_bound": 0.5,
+          "rate_among_known": 0.0
+        }
+      },
+      "family:none": {
+        "n_queries": 1,
+        "recall_at_5": 1.0,
+        "mrr_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "wrong_id_at_1": {
+          "eligible": 0,
+          "wrong": 0,
+          "unknown": 0,
+          "adjudicated": 0,
+          "lower_bound": null,
+          "upper_bound": null,
+          "rate_among_known": null
+        }
+      },
+      "type:identifier": {
+        "n_queries": 5,
+        "recall_at_5": 1.0,
+        "mrr_at_10": 0.8666666666666666,
+        "ndcg_at_10": 0.9,
+        "wrong_id_at_1": {
+          "eligible": 5,
+          "wrong": 0,
+          "unknown": 1,
+          "adjudicated": 4,
+          "lower_bound": 0.0,
+          "upper_bound": 0.2,
+          "rate_among_known": 0.0
+        }
+      },
+      "type:natural": {
+        "n_queries": 1,
+        "recall_at_5": 1.0,
+        "mrr_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "wrong_id_at_1": {
+          "eligible": 0,
+          "wrong": 0,
+          "unknown": 0,
+          "adjudicated": 0,
+          "lower_bound": null,
+          "upper_bound": null,
+          "rate_among_known": null
+        }
+      }
+    },
+    "proposed": {
+      "all": {
+        "n_queries": 6,
+        "recall_at_5": 1.0,
+        "mrr_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "wrong_id_at_1": {
+          "eligible": 5,
+          "wrong": 0,
+          "unknown": 0,
+          "adjudicated": 5,
+          "lower_bound": 0.0,
+          "upper_bound": 0.0,
+          "rate_among_known": 0.0
+        }
+      },
+      "family:cve": {
+        "n_queries": 3,
+        "recall_at_5": 1.0,
+        "mrr_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "wrong_id_at_1": {
+          "eligible": 3,
+          "wrong": 0,
+          "unknown": 0,
+          "adjudicated": 3,
+          "lower_bound": 0.0,
+          "upper_bound": 0.0,
+          "rate_among_known": 0.0
+        }
+      },
+      "family:esp32": {
+        "n_queries": 2,
+        "recall_at_5": 1.0,
+        "mrr_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "wrong_id_at_1": {
+          "eligible": 2,
+          "wrong": 0,
+          "unknown": 0,
+          "adjudicated": 2,
+          "lower_bound": 0.0,
+          "upper_bound": 0.0,
+          "rate_among_known": 0.0
+        }
+      },
+      "family:none": {
+        "n_queries": 1,
+        "recall_at_5": 1.0,
+        "mrr_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "wrong_id_at_1": {
+          "eligible": 0,
+          "wrong": 0,
+          "unknown": 0,
+          "adjudicated": 0,
+          "lower_bound": null,
+          "upper_bound": null,
+          "rate_among_known": null
+        }
+      },
+      "type:identifier": {
+        "n_queries": 5,
+        "recall_at_5": 1.0,
+        "mrr_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "wrong_id_at_1": {
+          "eligible": 5,
+          "wrong": 0,
+          "unknown": 0,
+          "adjudicated": 5,
+          "lower_bound": 0.0,
+          "upper_bound": 0.0,
+          "rate_among_known": 0.0
+        }
+      },
+      "type:natural": {
+        "n_queries": 1,
+        "recall_at_5": 1.0,
+        "mrr_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "wrong_id_at_1": {
+          "eligible": 0,
+          "wrong": 0,
+          "unknown": 0,
+          "adjudicated": 0,
+          "lower_bound": null,
+          "upper_bound": null,
+          "rate_among_known": null
+        }
+      }
+    },
+    "proposed_fixed": {
+      "all": {
+        "n_queries": 6,
+        "recall_at_5": 1.0,
+        "mrr_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "wrong_id_at_1": {
+          "eligible": 5,
+          "wrong": 0,
+          "unknown": 0,
+          "adjudicated": 5,
+          "lower_bound": 0.0,
+          "upper_bound": 0.0,
+          "rate_among_known": 0.0
+        }
+      },
+      "family:cve": {
+        "n_queries": 3,
+        "recall_at_5": 1.0,
+        "mrr_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "wrong_id_at_1": {
+          "eligible": 3,
+          "wrong": 0,
+          "unknown": 0,
+          "adjudicated": 3,
+          "lower_bound": 0.0,
+          "upper_bound": 0.0,
+          "rate_among_known": 0.0
+        }
+      },
+      "family:esp32": {
+        "n_queries": 2,
+        "recall_at_5": 1.0,
+        "mrr_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "wrong_id_at_1": {
+          "eligible": 2,
+          "wrong": 0,
+          "unknown": 0,
+          "adjudicated": 2,
+          "lower_bound": 0.0,
+          "upper_bound": 0.0,
+          "rate_among_known": 0.0
+        }
+      },
+      "family:none": {
+        "n_queries": 1,
+        "recall_at_5": 1.0,
+        "mrr_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "wrong_id_at_1": {
+          "eligible": 0,
+          "wrong": 0,
+          "unknown": 0,
+          "adjudicated": 0,
+          "lower_bound": null,
+          "upper_bound": null,
+          "rate_among_known": null
+        }
+      },
+      "type:identifier": {
+        "n_queries": 5,
+        "recall_at_5": 1.0,
+        "mrr_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "wrong_id_at_1": {
+          "eligible": 5,
+          "wrong": 0,
+          "unknown": 0,
+          "adjudicated": 5,
+          "lower_bound": 0.0,
+          "upper_bound": 0.0,
+          "rate_among_known": 0.0
+        }
+      },
+      "type:natural": {
+        "n_queries": 1,
+        "recall_at_5": 1.0,
+        "mrr_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "wrong_id_at_1": {
+          "eligible": 0,
+          "wrong": 0,
+          "unknown": 0,
+          "adjudicated": 0,
+          "lower_bound": null,
+          "upper_bound": null,
+          "rate_among_known": null
+        }
+      }
+    },
+    "rrf": {
+      "all": {
+        "n_queries": 6,
+        "recall_at_5": 1.0,
+        "mrr_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "wrong_id_at_1": {
+          "eligible": 5,
+          "wrong": 0,
+          "unknown": 0,
+          "adjudicated": 5,
+          "lower_bound": 0.0,
+          "upper_bound": 0.0,
+          "rate_among_known": 0.0
+        }
+      },
+      "family:cve": {
+        "n_queries": 3,
+        "recall_at_5": 1.0,
+        "mrr_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "wrong_id_at_1": {
+          "eligible": 3,
+          "wrong": 0,
+          "unknown": 0,
+          "adjudicated": 3,
+          "lower_bound": 0.0,
+          "upper_bound": 0.0,
+          "rate_among_known": 0.0
+        }
+      },
+      "family:esp32": {
+        "n_queries": 2,
+        "recall_at_5": 1.0,
+        "mrr_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "wrong_id_at_1": {
+          "eligible": 2,
+          "wrong": 0,
+          "unknown": 0,
+          "adjudicated": 2,
+          "lower_bound": 0.0,
+          "upper_bound": 0.0,
+          "rate_among_known": 0.0
+        }
+      },
+      "family:none": {
+        "n_queries": 1,
+        "recall_at_5": 1.0,
+        "mrr_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "wrong_id_at_1": {
+          "eligible": 0,
+          "wrong": 0,
+          "unknown": 0,
+          "adjudicated": 0,
+          "lower_bound": null,
+          "upper_bound": null,
+          "rate_among_known": null
+        }
+      },
+      "type:identifier": {
+        "n_queries": 5,
+        "recall_at_5": 1.0,
+        "mrr_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "wrong_id_at_1": {
+          "eligible": 5,
+          "wrong": 0,
+          "unknown": 0,
+          "adjudicated": 5,
+          "lower_bound": 0.0,
+          "upper_bound": 0.0,
+          "rate_among_known": 0.0
+        }
+      },
+      "type:natural": {
+        "n_queries": 1,
+        "recall_at_5": 1.0,
+        "mrr_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "wrong_id_at_1": {
+          "eligible": 0,
+          "wrong": 0,
+          "unknown": 0,
+          "adjudicated": 0,
+          "lower_bound": null,
+          "upper_bound": null,
+          "rate_among_known": null
+        }
+      }
+    },
+    "rrf_bonus": {
+      "all": {
+        "n_queries": 6,
+        "recall_at_5": 1.0,
+        "mrr_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "wrong_id_at_1": {
+          "eligible": 5,
+          "wrong": 0,
+          "unknown": 0,
+          "adjudicated": 5,
+          "lower_bound": 0.0,
+          "upper_bound": 0.0,
+          "rate_among_known": 0.0
+        }
+      },
+      "family:cve": {
+        "n_queries": 3,
+        "recall_at_5": 1.0,
+        "mrr_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "wrong_id_at_1": {
+          "eligible": 3,
+          "wrong": 0,
+          "unknown": 0,
+          "adjudicated": 3,
+          "lower_bound": 0.0,
+          "upper_bound": 0.0,
+          "rate_among_known": 0.0
+        }
+      },
+      "family:esp32": {
+        "n_queries": 2,
+        "recall_at_5": 1.0,
+        "mrr_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "wrong_id_at_1": {
+          "eligible": 2,
+          "wrong": 0,
+          "unknown": 0,
+          "adjudicated": 2,
+          "lower_bound": 0.0,
+          "upper_bound": 0.0,
+          "rate_among_known": 0.0
+        }
+      },
+      "family:none": {
+        "n_queries": 1,
+        "recall_at_5": 1.0,
+        "mrr_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "wrong_id_at_1": {
+          "eligible": 0,
+          "wrong": 0,
+          "unknown": 0,
+          "adjudicated": 0,
+          "lower_bound": null,
+          "upper_bound": null,
+          "rate_among_known": null
+        }
+      },
+      "type:identifier": {
+        "n_queries": 5,
+        "recall_at_5": 1.0,
+        "mrr_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "wrong_id_at_1": {
+          "eligible": 5,
+          "wrong": 0,
+          "unknown": 0,
+          "adjudicated": 5,
+          "lower_bound": 0.0,
+          "upper_bound": 0.0,
+          "rate_among_known": 0.0
+        }
+      },
+      "type:natural": {
+        "n_queries": 1,
+        "recall_at_5": 1.0,
+        "mrr_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "wrong_id_at_1": {
+          "eligible": 0,
+          "wrong": 0,
+          "unknown": 0,
+          "adjudicated": 0,
+          "lower_bound": null,
+          "upper_bound": null,
+          "rate_among_known": null
+        }
+      }
+    },
+    "rrf_bonus_fixed": {
+      "all": {
+        "n_queries": 6,
+        "recall_at_5": 1.0,
+        "mrr_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "wrong_id_at_1": {
+          "eligible": 5,
+          "wrong": 0,
+          "unknown": 0,
+          "adjudicated": 5,
+          "lower_bound": 0.0,
+          "upper_bound": 0.0,
+          "rate_among_known": 0.0
+        }
+      },
+      "family:cve": {
+        "n_queries": 3,
+        "recall_at_5": 1.0,
+        "mrr_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "wrong_id_at_1": {
+          "eligible": 3,
+          "wrong": 0,
+          "unknown": 0,
+          "adjudicated": 3,
+          "lower_bound": 0.0,
+          "upper_bound": 0.0,
+          "rate_among_known": 0.0
+        }
+      },
+      "family:esp32": {
+        "n_queries": 2,
+        "recall_at_5": 1.0,
+        "mrr_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "wrong_id_at_1": {
+          "eligible": 2,
+          "wrong": 0,
+          "unknown": 0,
+          "adjudicated": 2,
+          "lower_bound": 0.0,
+          "upper_bound": 0.0,
+          "rate_among_known": 0.0
+        }
+      },
+      "family:none": {
+        "n_queries": 1,
+        "recall_at_5": 1.0,
+        "mrr_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "wrong_id_at_1": {
+          "eligible": 0,
+          "wrong": 0,
+          "unknown": 0,
+          "adjudicated": 0,
+          "lower_bound": null,
+          "upper_bound": null,
+          "rate_among_known": null
+        }
+      },
+      "type:identifier": {
+        "n_queries": 5,
+        "recall_at_5": 1.0,
+        "mrr_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "wrong_id_at_1": {
+          "eligible": 5,
+          "wrong": 0,
+          "unknown": 0,
+          "adjudicated": 5,
+          "lower_bound": 0.0,
+          "upper_bound": 0.0,
+          "rate_among_known": 0.0
+        }
+      },
+      "type:natural": {
+        "n_queries": 1,
+        "recall_at_5": 1.0,
+        "mrr_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "wrong_id_at_1": {
+          "eligible": 0,
+          "wrong": 0,
+          "unknown": 0,
+          "adjudicated": 0,
+          "lower_bound": null,
+          "upper_bound": null,
+          "rate_among_known": null
+        }
+      }
+    },
+    "tfidf": {
+      "all": {
+        "n_queries": 6,
+        "recall_at_5": 1.0,
+        "mrr_at_10": 0.8055555555555555,
+        "ndcg_at_10": 0.8551549589285763,
+        "wrong_id_at_1": {
+          "eligible": 5,
+          "wrong": 0,
+          "unknown": 0,
+          "adjudicated": 5,
+          "lower_bound": 0.0,
+          "upper_bound": 0.0,
+          "rate_among_known": 0.0
+        }
+      },
+      "family:cve": {
+        "n_queries": 3,
+        "recall_at_5": 1.0,
+        "mrr_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "wrong_id_at_1": {
+          "eligible": 3,
+          "wrong": 0,
+          "unknown": 0,
+          "adjudicated": 3,
+          "lower_bound": 0.0,
+          "upper_bound": 0.0,
+          "rate_among_known": 0.0
+        }
+      },
+      "family:esp32": {
+        "n_queries": 2,
+        "recall_at_5": 1.0,
+        "mrr_at_10": 0.41666666666666663,
+        "ndcg_at_10": 0.5654648767857288,
+        "wrong_id_at_1": {
+          "eligible": 2,
+          "wrong": 0,
+          "unknown": 0,
+          "adjudicated": 2,
+          "lower_bound": 0.0,
+          "upper_bound": 0.0,
+          "rate_among_known": 0.0
+        }
+      },
+      "family:none": {
+        "n_queries": 1,
+        "recall_at_5": 1.0,
+        "mrr_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "wrong_id_at_1": {
+          "eligible": 0,
+          "wrong": 0,
+          "unknown": 0,
+          "adjudicated": 0,
+          "lower_bound": null,
+          "upper_bound": null,
+          "rate_among_known": null
+        }
+      },
+      "type:identifier": {
+        "n_queries": 5,
+        "recall_at_5": 1.0,
+        "mrr_at_10": 0.7666666666666667,
+        "ndcg_at_10": 0.8261859507142916,
+        "wrong_id_at_1": {
+          "eligible": 5,
+          "wrong": 0,
+          "unknown": 0,
+          "adjudicated": 5,
+          "lower_bound": 0.0,
+          "upper_bound": 0.0,
+          "rate_among_known": 0.0
+        }
+      },
+      "type:natural": {
+        "n_queries": 1,
+        "recall_at_5": 1.0,
+        "mrr_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "wrong_id_at_1": {
+          "eligible": 0,
+          "wrong": 0,
+          "unknown": 0,
+          "adjudicated": 0,
+          "lower_bound": null,
+          "upper_bound": null,
+          "rate_among_known": null
+        }
+      }
+    }
+  },
+  "note": "Recall uses known positives. WrongIdentifier@1 reports unknown conflicting unjudged tops and bounds."
+}
