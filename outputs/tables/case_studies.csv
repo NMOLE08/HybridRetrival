@@ -1,0 +1,4 @@
+case,query_id,query,rrf_top_doc,rrf_mrr_at_10,proposed_top_doc,proposed_mrr_at_10,proposed_fixed_top_doc,proposed_fixed_mrr_at_10
+exploratory success,test01,What JNDI endpoint issue is described by CVE-2021-44228?,cve-2021-44832,0.5,cve-2021-44832,0.5,cve-2021-45046,1.0
+selected-method failure,test04,What deployment conditions are described for CVE-2022-22965?,cve-2020-1472,0.25,cve-2020-1472,0.25,cve-2022-22965,1.0
+natural no-change,test11,Which vulnerability allows unauthenticated remote desktop requests to cause code execution?,cve-2019-0708,1.0,cve-2019-0708,1.0,cve-2019-0708,1.0

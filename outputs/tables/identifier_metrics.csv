@@ -1,0 +1,8 @@
+method,label,n_queries,mrr_at_10,recall_at_5,ndcg_at_10,wrong_id_lower,wrong_id_upper,wrong_id_observed,wrong_id_unknown,wrong_id_eligible
+tfidf,TF-IDF,10,0.7333333333333333,1.0,0.8086215664331643,0.1,0.2,1,1,10
+minilm,MiniLM,10,0.8125,0.9,0.8639821033974456,0.2,0.3,2,1,10
+rrf,RRF,10,0.875,1.0,0.9124102961690663,0.1,0.2,1,1,10
+rrf_bonus,Bonus selected,10,0.875,1.0,0.9124102961690663,0.1,0.2,1,1,10
+proposed,Full selected,10,0.875,1.0,0.9124102961690663,0.1,0.2,1,1,10
+rrf_bonus_fixed,Bonus exploratory,10,1.0,1.0,1.0,0.0,0.0,0,0,10
+proposed_fixed,Full exploratory,10,1.0,1.0,1.0,0.0,0.0,0,0,10

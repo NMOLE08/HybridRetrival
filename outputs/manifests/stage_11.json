@@ -1,0 +1,13 @@
+{
+  "stage": 11,
+  "status": "PASS",
+  "date": "2026-10-18",
+  "work": "Generated five reproducible figures, CSV/LaTeX tables and documented methodology, results and limitations.",
+  "commands": ["python scripts/make_paper_artifacts.py", "python -m pytest -q"],
+  "tests": "21 passed; figure creation succeeded and architecture and effectiveness PNGs visually inspected.",
+  "comparison": "Primary proposed and bonus equal RRF; fixed exploratory match and full settings have identical aggregate metrics; penalty benefit not demonstrated.",
+  "decisions": "No per-query MRR decline was observed for exploratory variants; a genuine selected-method baseline failure is included instead of an invented adverse example.",
+  "risks": "Tiny, incompletely judged, agent-authored pilot; measured timing is not end-to-end.",
+  "next_stage": 12,
+  "commit": "See Git history."
+}

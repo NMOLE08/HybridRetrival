@@ -143,3 +143,14 @@
 - Risks: The pilot's agent-authored, source-conditioned queries and non-independently reviewed, incomplete labels limit generalization. Timing is sequential CPU component timing, not end-to-end latency. SciFact is not direct evidence about technical identifiers.
 - Next exact stage: Stage 11 figures and analysis. Collect and validate the optional SciFact run if it finishes; its completion is not required for the primary acceptance gate.
 - Commit: see Git history for the frozen runner and primary results checkpoints.
+
+### Stage 11 — Figures, ablations, cases and limitations
+- Status: PASS.
+- Date/time: 2026-10-18 (Asia/Kolkata).
+- Work completed: Generated five SVG/PNG figures and CSV/LaTeX tables directly from saved run files; documented mathematical methods, observed comparisons, error cases and limitations. The case table includes an RRF failure, exploratory success and natural-query invariance. Inspected the rendered architecture and effectiveness charts.
+- Files: `scripts/make_paper_artifacts.py`, `outputs/figures/`, `outputs/tables/`, `docs/METHODS.md`, `docs/RESULTS_INTERPRETATION.md`, `docs/LIMITATIONS.md`, `outputs/manifests/stage_11.json`.
+- Commands/tests: `python scripts/make_paper_artifacts.py` (all artifacts generated), `python -m pytest -q` (21 passed).
+- Measured results: Selected full and bonus methods exactly match RRF; both exploratory nonzero variants yield the same pilot metrics. The experimental penalty has no demonstrated incremental benefit. Paired exploratory MRR interval [0, 0.3] includes zero.
+- Decisions / risks: No fixed-variant decrease in per-query MRR is observed on these few queries; it would be misleading to fabricate one. A real selected-method failure is shown instead. Graphs report wrong-ID uncertainty and distinguish measured component and one-time timings.
+- Next exact stage: Stage 12 CLI, paper outline, handoff, installation and reproducibility checks. Optional SciFact CPU run remains in progress.
+- Commit: see Git history.
