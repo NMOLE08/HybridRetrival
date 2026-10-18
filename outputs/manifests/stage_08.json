@@ -1,0 +1,7 @@
+{
+  "stage": "08",
+  "status": "PASS",
+  "tests": "21 passed; hand-calculated metrics and saved-ranking reconstruction",
+  "wrong_id": "adjudicated negatives only, unknowns reported with bounds",
+  "next": "09"
+}

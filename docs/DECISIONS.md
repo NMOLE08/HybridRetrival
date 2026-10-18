@@ -37,3 +37,6 @@
 
 ## 2026-10-18 — Stage 07
 - Match fraction uses distinct canonical query IDs; conflict is a binary indicator of at least one explicitly contradictory family. Scores are directly adjusted without global normalization. For identifier-free queries retain original order and exact scores. Example weights are illustrative, not selected settings.
+
+## 2026-10-18 — Stage 08
+- A contradictory unjudged top result is unknown for wrong-identifier@1, not a negative or correct outcome. Report observed count, eligible denominator and lower/upper bounds. Before dev tuning, use the conservative upper bound in the previously declared wrong-ID selection tie-break.

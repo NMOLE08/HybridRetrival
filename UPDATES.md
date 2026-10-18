@@ -30,3 +30,6 @@ Added and tested identifier extraction for CVEs and ESP32 variants, including Un
 
 ## 2026-10-18 — Stage 07 complete
 Added the proposed explainable match bonus and optional conflict penalty over RRF. Tests confirm identifier-free queries retain the exact baseline scores and order, and explanations reproduce the adjusted score. Seventeen tests pass; example weights are illustrative and have not been tuned. Next: evaluation metrics.
+
+## 2026-10-18 — Stage 08 complete
+Implemented and tested retrieval metrics, paired confidence-interval machinery, timing support, and reconstruction of metrics from saved rankings. Wrong-identifier errors require an explicit negative judgment; unjudged contradictory results are reported as unknown with bounds. Twenty-one tests pass. Next: select weights using the development set only.

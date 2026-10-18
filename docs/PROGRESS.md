@@ -108,3 +108,15 @@
 - Decisions / risks: Weights in the example are illustrative; no hyperparameters selected. Family-level conflicts are deliberately conservative. Test labels remain held out.
 - Next exact stage: Stage 08 metrics and evaluation infrastructure.
 - Commit: see Git history.
+
+### Stage 08 — Metrics and evaluation
+- Status: PASS.
+- Date/time: 2026-10-18 (Asia/Kolkata).
+- Work completed: Implemented known-positive Recall@5, MRR@10, binary nDCG@10, adjudicated wrong-identifier@1, grouped summaries, paired bootstrap and warmed wall-clock timing. Added a command that regenerates metrics from saved rankings and qrels.
+- Files: src/iphr/metrics.py, evaluation.py, timing.py, scripts/evaluate_rankings.py, tests/test_metrics.py, tests/test_evaluation_io.py, outputs/manifests/stage_08.json.
+- Commands/tests: `python -m pytest -q` (21 passed). Hand calculations cover cutoffs, no positives, reciprocal rank, nDCG, unknown/adjudicated wrong variants and reproducible paired bootstrap; a toy saved ranking was evaluated twice with byte-identical metric output.
+- Baseline comparison: Framework only; no aggregate development or test evaluation performed in this stage.
+- Decisions: Contradictory but unjudged top documents are explicitly unknown; report lower/upper wrong-identifier bounds and denominator. Before grid tuning, clarified that the existing wrong-ID tie-break uses the conservative upper bound.
+- Risks: Incomplete qrels and tiny per-group samples severely limit confidence interval and error-rate interpretation. No test tuning or model training.
+- Next exact stage: Stage 09 development-only grid and parameter freeze.
+- Commit: see Git history.
