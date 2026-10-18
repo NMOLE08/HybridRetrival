@@ -1,0 +1,7 @@
+query_id,tfidf_top1,minilm_top1,rrf_top1,tfidf_dense_disagree
+dev01,cve-2024-3094,cve-2024-3094,cve-2024-3094,False
+dev02,cve-2014-6271,cve-2014-6271,cve-2014-6271,False
+dev03,cve-2021-45105,cve-2021-45105,cve-2021-45105,False
+dev04,cve-2021-34527,esp32p4,esp32c2,True
+dev05,cve-2014-6271,esp32s2,esp32s2,True
+dev06,cve-2020-0601,cve-2020-0601,cve-2020-0601,False

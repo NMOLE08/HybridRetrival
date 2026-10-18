@@ -9,7 +9,7 @@ def main():
     sub = parser.add_subparsers(dest="command")
     search = sub.add_parser("search", help="Search the technical corpus")
     search.add_argument("--query", required=True)
-    search.add_argument("--method", choices=["dense", "lexical"], default="dense")
+    search.add_argument("--method", choices=["dense", "lexical", "rrf"], default="dense")
     search.add_argument("--top-k", type=int, default=5)
     search.add_argument("--corpus", default="data/technical/corpus.jsonl")
     args=parser.parse_args()
@@ -19,6 +19,9 @@ def main():
             if args.method == "dense":
                 from .dense import DenseRetriever
                 retriever=DenseRetriever(docs)
+            elif args.method == "rrf":
+                from .hybrid import HybridRetriever
+                retriever=HybridRetriever(docs)
             else:
                 from .lexical import LexicalRetriever
                 retriever=LexicalRetriever(docs)

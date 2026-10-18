@@ -74,3 +74,15 @@
 - Decisions / risks: Vectorizer fits only the corpus without qrels, default two-character word tokenization; test labels remain untouched. No broad effectiveness conclusions.
 - Next exact stage: Stage 05 standard RRF.
 - Commit: see Git history.
+
+### Stage 05 — Unmodified RRF hybrid baseline
+- Status: PASS.
+- Date/time: 2026-10-18 (Asia/Kolkata).
+- Work completed: Implemented standard RRF with 1-based ranks, k=60, full rankings over the 31-document universe, zero contribution for missing lists, and deterministic doc_id tie breaks. Saved complete lexical, MiniLM and RRF rankings for all six development queries plus a top-10 comparison and top-1 table.
+- Files: src/iphr/hybrid.py, tests/test_hybrid.py, scripts/run_dev_baselines.py, outputs/dev/baseline_rankings.csv, baseline_comparisons.json, baseline_top1_comparison.csv.
+- Commands/tests: `python -m pytest -q` (11 passed); `python scripts/run_dev_baselines.py` (558 ranking rows). Hand-computed RRF scores and partial-list behavior passed.
+- Comparison: TF-IDF and MiniLM top results differ on 2/6 development queries; for dev04 their first IDs differ and RRF ranks the corresponding known source first. This is a tiny descriptive pilot observation, not final evaluation.
+- Decisions: Full lists used at this corpus size; RRF attributed to Cormack, Clarke and Buettcher (2009). No final-test labels used.
+- Risks: Source-conditioned queries and incomplete qrels; performance is not established by this comparison.
+- Next exact stage: Stage 06 supported identifier parsing.
+- Commit: see Git history.

@@ -21,3 +21,6 @@ Downloaded and verified the existing pretrained MiniLM model, recorded its revis
 
 ## 2026-10-18 — Stage 04 complete
 Implemented and tested TF-IDF search on the same 31 passages as MiniLM. On the first development example both methods place the known source first but produce different lower-ranked results; this single query is not an overall comparison. Nine tests pass. Next: standard RRF hybrid retrieval.
+
+## 2026-10-18 — Stage 05 complete
+Implemented and hand-checked standard RRF hybrid retrieval. Saved all three baseline rankings for six development queries; TF-IDF and MiniLM disagree at the top on two of them. Eleven tests pass. The test split remains held out. Next: identifier extraction and conflict detection.

@@ -28,3 +28,6 @@
 
 ## 2026-10-18 — Stage 04
 - Fix scikit-learn default word TF-IDF with L2 normalization. Tokenization splits hyphenated IDs and drops one-character tokens; do not silently alter the main baseline.
+
+## 2026-10-18 — Stage 05
+- RRF k=60 and full ranks are used for this 31-document pilot; compare identical document universes. No tuning is performed by this baseline.

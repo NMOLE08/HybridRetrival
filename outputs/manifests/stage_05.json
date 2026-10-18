@@ -1,0 +1,9 @@
+{
+  "stage": "05",
+  "status": "PASS",
+  "tests": "11 passed, hand-checked RRF",
+  "dev_queries": 6,
+  "ranking_rows": 558,
+  "tfidf_minilm_top1_disagreements": 2,
+  "next": "06"
+}
