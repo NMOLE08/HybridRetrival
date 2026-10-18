@@ -154,3 +154,15 @@
 - Decisions / risks: No fixed-variant decrease in per-query MRR is observed on these few queries; it would be misleading to fabricate one. A real selected-method failure is shown instead. Graphs report wrong-ID uncertainty and distinguish measured component and one-time timings.
 - Next exact stage: Stage 12 CLI, paper outline, handoff, installation and reproducibility checks. Optional SciFact CPU run remains in progress.
 - Commit: see Git history.
+
+### Stage 12 — Reproducibility bundle and handoff
+- Status: PASS for the primary research bundle; optional SciFact remains deferred as described in Stage 10.
+- Date/time: 2026-10-18 (Asia/Kolkata).
+- Work completed: Added IEEE-style paper outline, complete handoff, an explainable proposed-method CLI and a one-command rerun that writes to a new directory, verifies frozen hashes, compares reference rankings/metrics and regenerates figures. Updated README and references. No user interface was requested or added.
+- Files: `docs/PAPER_OUTLINE.md`, `docs/HANDOFF.md`, `README.md`, `src/iphr/cli.py`, `scripts/reproduce.py`, the output-directory support in experiment/figure runners, and `outputs/manifests/repro_verification.json`.
+- Commands/tests: `python -m pip install -e . --no-deps` (clean package reinstall using installed dependencies), `python -m pytest -q` (21 passed), `python scripts/reproduce.py` (2,604 rankings and metrics reproduced, figures generated), and `python -m iphr.cli search --query 'ESP32-S3 Wi-Fi CSI' --method proposed --top-k 5 --explain` (passed; top result esp32s3 and decisions shown).
+- Measured results: The primary selected method remains identical to RRF; numerical findings and exploratory bounds remain those recorded in Stage 10.
+- Risks: This verifies a clean package reinstall, not an entirely new machine. The technical pilot and its non-independent annotations are not sufficient for broad paper claims. Optional SciFact indexing requires substantial CPU time and is not required by the primary gate.
+- Next exact step: independent human annotation, expanded benchmark and new untouched final test for any paper-grade effectiveness claim; complete SciFact separately if desired.
+- Commit: see Git history.
+

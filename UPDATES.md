@@ -44,3 +44,6 @@ The primary stage gate has passed. SciFact is deferred because its one-time CPU 
 
 ## 2026-10-18 — Stage 11 complete
 Generated five research figures in PNG and SVG, metrics and case-study tables in CSV and LaTeX, and written methods, interpretation and limitations. They trace back to saved results. The selected method is a no-op, and the exploratory match bonus and full method give identical aggregate metrics here, so no separate penalty benefit is demonstrated. The case studies include a real baseline failure and a natural-query no-change example. All 21 tests pass. Next: paper outline, handoff, command-line search and clean-install/reproducibility verification.
+
+## 2026-10-18 — Stage 12 primary bundle complete
+Added the paper outline, exact setup and reproduction instructions, a search CLI with match/conflict explanations, and a command that reruns the experiment in a separate directory. A clean package reinstall succeeded; 21 tests pass; a fresh full rerun reproduced all 2,604 recorded ranking rows and the metric summaries and regenerated the figures. The search demo correctly returned the ESP32-S3 source and showed the selected zero weights. SciFact remains an optional, CPU-expensive secondary run; the pilot still needs independent human review and a much larger new held-out benchmark before broad research conclusions are justified.

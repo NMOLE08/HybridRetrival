@@ -1,5 +1,6 @@
 """Build paper figures and tables from saved experiment outputs, never hard-coded measurements."""
 from pathlib import Path
+import argparse
 import json
 import csv
 import matplotlib
@@ -40,6 +41,10 @@ def architecture(config):
 
 
 def main():
+    global FINAL, FIG, TABLE
+    parser=argparse.ArgumentParser(description='Generate figures and tables from saved research outputs')
+    parser.add_argument('--results',default=str(FINAL));parser.add_argument('--figures',default=str(FIG));parser.add_argument('--tables',default=str(TABLE))
+    args=parser.parse_args(); FINAL=Path(args.results); FIG=Path(args.figures); TABLE=Path(args.tables)
     FIG.mkdir(parents=True,exist_ok=True); TABLE.mkdir(parents=True,exist_ok=True)
     data=json.loads((FINAL/'metrics.json').read_text(encoding='utf-8'))['methods']
     timing=json.loads((FINAL/'timing_summary.json').read_text(encoding='utf-8'))

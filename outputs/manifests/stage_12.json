@@ -1,0 +1,12 @@
+{
+  "stage": 12,
+  "status": "PASS_PRIMARY_BUNDLE",
+  "date": "2026-10-18",
+  "work": "Paper outline, handoff, reproducible separate-output runner and explainable search CLI; no frontend.",
+  "commands": ["python -m pip install -e . --no-deps", "python -m pytest -q", "python scripts/reproduce.py", "python -m iphr.cli search --query 'ESP32-S3 Wi-Fi CSI' --method proposed --top-k 5 --explain"],
+  "tests": "Clean package reinstall passed; 21 tests passed; 2604 ranking rows and metric summaries reproduced; figures generated; CLI explanations verified.",
+  "comparison": "Primary method equals RRF due to dev-selected zero weights; exploratory findings remain labeled as such.",
+  "risks": "Tiny agent-annotated pilot with incomplete judgments, no independent validation; optional SciFact CPU run deferred.",
+  "next_step": "Expand the dataset, independently annotate it and hold out a fresh test before seeking paper-grade claims.",
+  "commit": "See Git history."
+}

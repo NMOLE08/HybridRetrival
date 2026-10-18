@@ -1,0 +1,11 @@
+{
+  "date_utc": "2026-10-18",
+  "clean_package_reinstall": ".venv/Scripts/python.exe -m pip install -e . --no-deps (passed; uses the already installed dependency snapshot)",
+  "tests": ".venv/Scripts/python.exe -m pytest -q: 21 passed",
+  "reproduction_command": ".venv/Scripts/python.exe scripts/reproduce.py",
+  "reproduction_directory": "cache/reproductions/20261018T101402532699Z",
+  "reproduction_result": "PASS: all 2604 ranking rows match on query, method, document and rank; saved metric summaries match; five figures and tables regenerated. Cache is intentionally ignored by Git.",
+  "explainable_search": ".venv/Scripts/python.exe -m iphr.cli search --query 'ESP32-S3 Wi-Fi CSI' --method proposed --top-k 5 --explain",
+  "search_result": "PASS: first document esp32s3, with source URL, matched ESP32-S3, zero selected bonus and penalty; subsequent conflicting variants explained.",
+  "limitations": "This is a clean package reinstall, not a newly provisioned environment; exact dependency versions are captured separately. Timings are allowed to vary."
+}

@@ -1,6 +1,6 @@
 """Run frozen held-out pilot once, with an identical-rank repeat check."""
 from __future__ import annotations
-import csv,hashlib,json,subprocess,time
+import argparse,csv,hashlib,json,subprocess,time
 from pathlib import Path
 import numpy as np
 import yaml
@@ -17,6 +17,10 @@ from evaluate_rankings import evaluate_file
 def digest(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 def main():
+    parser=argparse.ArgumentParser(description='Run frozen technical evaluation')
+    parser.add_argument('--output-dir',default='outputs/final')
+    parser.add_argument('--manifest-path',default='outputs/manifests/final_run.json')
+    args=parser.parse_args()
     freeze=json.loads(Path('outputs/manifests/dev_freeze.json').read_text(encoding='utf-8'))
     cfg_path=Path('configs/final.yaml')
     if digest(cfg_path)!=freeze['config_sha256']:raise ValueError('Frozen configuration hash mismatch')
@@ -65,7 +69,7 @@ def main():
             _,selected_ms=elapsed(lambda:rerank(q['text'],c,docs,cfg['lambda_match'],cfg['lambda_conflict']))
             _,fixed_ms=elapsed(lambda:rerank(q['text'],c,docs,cfg['exploratory_lambda_match'],cfg['exploratory_lambda_conflict']))
             timings.append({'query_id':q['query_id'],'repeat':repetition+1,'lexical_ms':lex_ms,'query_embedding_ms':embedding_ms,'dense_rank_ms':dense_rank_ms,'rrf_fusion_ms':fusion_ms,'selected_rerank_ms':selected_ms,'fixed_rerank_ms':fixed_ms})
-    out=Path('outputs/final');out.mkdir(parents=True,exist_ok=True)
+    out=Path(args.output_dir);out.mkdir(parents=True,exist_ok=True)
     ranks=out/'rankings.csv'
     with ranks.open('w',encoding='utf-8',newline='') as f:
         w=csv.DictWriter(f,fieldnames=list(rankings[0]),lineterminator='\n');w.writeheader();w.writerows(rankings)
@@ -87,7 +91,9 @@ def main():
     (out/'timing_summary.json').write_text(json.dumps(timing_summary,indent=2)+'\n',encoding='utf-8')
     demo=json.loads(Path('outputs/examples/dense_demo.json').read_text(encoding='utf-8'))
     manifest={'config_sha256':digest(cfg_path),'dataset_summary_sha256':digest('outputs/manifests/dataset_summary.json'),'query_sha256':freeze['test_query_sha256'],'qrels_sha256':freeze['test_qrels_sha256'],'git_commit':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),'model_id':cfg['model'],'model_revision':cfg['model_revision'],'model_weights_sha256':demo['weights_sha256'],'corpus_hash':dense.corpus_hash,'device':'cpu','seed':cfg['seed'],'queries':len(queries),'ranking_rows':len(rankings),'repeat_checks_passed':repeat_checks,'parser_coverage_count':sum(bool(extract_identifiers(q['text'])) for q in queries),'environment_manifest':'outputs/manifests/environment.json','note':'Fixed nonzero variants are exploratory; selected primary configuration is the dev-frozen no-op.'}
-    Path('outputs/manifests/final_run.json').write_text(json.dumps(manifest,indent=2)+'\n',encoding='utf-8')
+    manifest['git_tracked_worktree_dirty']=bool(subprocess.check_output(['git','status','--porcelain','--untracked-files=no'],text=True).strip())
+    manifest_path=Path(args.manifest_path);manifest_path.parent.mkdir(parents=True,exist_ok=True)
+    manifest_path.write_text(json.dumps(manifest,indent=2)+'\n',encoding='utf-8')
     print(json.dumps({'ranking_rows':len(rankings),'queries':len(queries),'methods':list(summaries),'repeat_checks':len(repeat_checks)},indent=2))
 
 if __name__=='__main__':main()
