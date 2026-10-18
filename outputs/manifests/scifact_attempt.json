@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-18",
+  "command": "python scripts/run_scifact.py",
+  "status": "STOPPED_AND_DEFERRED",
+  "documents": 5183,
+  "attempted": "Official archive was downloaded with system-trust-store TLS and its published MD5 verified. Frozen MiniLM loaded; CPU document indexing continued for more than 15 minutes without reaching query evaluation.",
+  "result": "No SciFact rankings or metrics were produced. The process was stopped because of the substantial optional compute overhead. The verified local dataset and script can be used for a future restart.",
+  "archive_manifest": "outputs/manifests/scifact_download.json"
+}

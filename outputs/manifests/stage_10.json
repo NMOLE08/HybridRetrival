@@ -6,7 +6,7 @@
   "commands": ["python scripts/run_experiments.py", "python scripts/evaluate_rankings.py", "python scripts/fetch_scifact.py", "python scripts/run_scifact.py", "python -m pytest -q"],
   "tests": "21 passed; twelve repeated technical rankings matched; reconstructed metrics match saved summaries.",
   "primary_identifier_results": {"queries": 10, "rrf_mrr_at_10": 0.875, "selected_mrr_at_10": 0.875, "rrf_recall_at_5": 1.0, "selected_recall_at_5": 1.0, "wrong_id_observed": 1, "wrong_id_unknown": 1},
-  "decisions": "SciFact deferred due to substantial CPU indexing time; source data and frozen evaluation script retained. Nonzero sensitivity variants are exploratory.",
+  "decisions": "SciFact attempt stopped after more than 15 minutes in CPU document indexing, before query evaluation; source data and frozen evaluation script retained. No SciFact results produced. Nonzero sensitivity variants are exploratory.",
   "risks": "Tiny source-conditioned pilot; labels lack independent review and many pairs are unjudged; SciFact does not establish identifier accuracy.",
   "next_stage": 11,
   "commit": "See Git history; result-producing code is pinned in final_run.json."

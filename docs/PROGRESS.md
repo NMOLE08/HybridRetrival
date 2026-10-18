@@ -134,14 +134,14 @@
 - Commit: see Git history for the config freeze commit.
 
 ### Stage 10 — Held-out experiments and optional SciFact check
-- Status: PASS for the primary acceptance gate; the optional secondary evaluation is deferred due to substantial CPU indexing time and continues separately.
+- Status: PASS for the primary acceptance gate; the optional secondary evaluation was stopped and deferred due to substantial CPU indexing time.
 - Date/time: 2026-10-18 (Asia/Kolkata).
 - Work completed: Ran the frozen methods on all 12 held-out technical queries; repeated all rankings before reading test judgments and reconstructed the metric summaries from the stored ranking file. Downloaded the official SciFact archive with TLS verification through the system trust store, checked the published MD5 and recorded SHA-256 hashes.
 - Files: `scripts/run_experiments.py`, `scripts/evaluate_rankings.py`, `scripts/fetch_scifact.py`, `scripts/run_scifact.py`, `outputs/final/`, and the final-run and SciFact download manifests.
-- Commands/tests: `python scripts/run_experiments.py`, `python scripts/evaluate_rankings.py` (separate reconstruction), `python scripts/fetch_scifact.py`, `python scripts/run_scifact.py` (running), and `python -m pytest -q` (21 passed).
+- Commands/tests: `python scripts/run_experiments.py`, `python scripts/evaluate_rankings.py` (separate reconstruction), `python scripts/fetch_scifact.py`, `python scripts/run_scifact.py` (stopped during CPU indexing after more than 15 minutes without query results), and `python -m pytest -q` (21 passed).
 - Primary results: On the 10 identifier queries, RRF and the selected proposed method both have MRR@10 0.875, Recall@5 1.0, and one observed wrong identifier with one unknown outcome. The dev-selected weights are both zero. The fixed nonzero sensitivity method has MRR@10 1.0, but is exploratory; its paired bootstrap MRR difference against RRF is 0.125 with percentile interval [0, 0.3] across only 10 queries.
 - Risks: The pilot's agent-authored, source-conditioned queries and non-independently reviewed, incomplete labels limit generalization. Timing is sequential CPU component timing, not end-to-end latency. SciFact is not direct evidence about technical identifiers.
-- Next exact stage: Stage 11 figures and analysis. Collect and validate the optional SciFact run if it finishes; its completion is not required for the primary acceptance gate.
+- Next exact stage: Stage 11 figures and analysis. The optional SciFact run may be restarted separately; its completion is not required for the primary acceptance gate.
 - Commit: see Git history for the frozen runner and primary results checkpoints.
 
 ### Stage 11 — Figures, ablations, cases and limitations
@@ -152,7 +152,7 @@
 - Commands/tests: `python scripts/make_paper_artifacts.py` (all artifacts generated), `python -m pytest -q` (21 passed).
 - Measured results: Selected full and bonus methods exactly match RRF; both exploratory nonzero variants yield the same pilot metrics. The experimental penalty has no demonstrated incremental benefit. Paired exploratory MRR interval [0, 0.3] includes zero.
 - Decisions / risks: No fixed-variant decrease in per-query MRR is observed on these few queries; it would be misleading to fabricate one. A real selected-method failure is shown instead. Graphs report wrong-ID uncertainty and distinguish measured component and one-time timings.
-- Next exact stage: Stage 12 CLI, paper outline, handoff, installation and reproducibility checks. Optional SciFact CPU run remains in progress.
+- Next exact stage: Stage 12 CLI, paper outline, handoff, installation and reproducibility checks. Optional SciFact CPU run is deferred.
 - Commit: see Git history.
 
 ### Stage 12 — Reproducibility bundle and handoff

@@ -53,7 +53,7 @@ python scripts/fetch_scifact.py
 python scripts/run_scifact.py
 ```
 
-Indexing 5,183 documents on CPU can take substantial time. The run writes `outputs/final/scifact_*` and should not be presented as evidence of technical identifier accuracy. Save or move any previous SciFact output before rerunning, since that runner writes the same output names. Its source/license manifest is `outputs/manifests/scifact_download.json`.
+Indexing 5,183 documents on CPU can take substantial time. The attempted run was stopped after more than 15 minutes in document indexing, before query evaluation or any SciFact results. It can be restarted; the verified data remain in `data/scifact/` locally. The run writes `outputs/final/scifact_*` and should not be presented as evidence of technical identifier accuracy. Save or move any previous SciFact output before rerunning, since that runner writes the same output names. Its source/license manifest is `outputs/manifests/scifact_download.json`.
 
 ## Identity and outputs
 
