@@ -1,3 +1,5 @@
 *.jsonl text eol=lf
 *.tsv text eol=lf
 *.csv text eol=lf
+data/technical/*.md text eol=lf
+data/technical/LICENSES/* -text
