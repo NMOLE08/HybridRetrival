@@ -86,3 +86,14 @@
 - Risks: Source-conditioned queries and incomplete qrels; performance is not established by this comparison.
 - Next exact stage: Stage 06 supported identifier parsing.
 - Commit: see Git history.
+
+### Stage 06 — Identifier parser and conflict rules
+- Status: PASS.
+- Date/time: 2026-10-18 (Asia/Kolkata).
+- Work completed: Implemented one-codepoint Unicode-dash normalization and extraction of explicit CVEs and ESP32 C/S/H/P numeric variants, including a distinct generic ESP32 token and original source spans. Repeated identifiers are deduplicated. Added conservative same-family conflict checks; a generic ESP32 is not an explicit wrong variant and a passage containing any requested family variant is not penalized for mentioning others.
+- Files: src/iphr/normalization.py, identifiers.py, tests/test_identifiers.py, outputs/examples/identifier_examples.json, outputs/manifests/stage_06.json.
+- Commands/tests: `python -m pytest -q` (14 passed); saved parser examples. Tests cover Unicode dashes, case, spans, CVE and ESP variants, malformed suffix boundaries, duplicates, multiple IDs and natural language.
+- Baseline comparison: No ranking scores changed in this stage; the RRF checkpoint remains intact.
+- Decisions / limitations: IEEE Wi-Fi identifiers and arbitrary devices are not supported; parser does not infer identifiers. Family-level handling deliberately avoids conflict for a multi-ID query when at least one requested ID of that family occurs. Generic ID matching is distinct from variant matching.
+- Next exact stage: Stage 07 identifier-aware score adjustment.
+- Commit: see Git history.

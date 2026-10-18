@@ -24,3 +24,6 @@ Implemented and tested TF-IDF search on the same 31 passages as MiniLM. On the f
 
 ## 2026-10-18 — Stage 05 complete
 Implemented and hand-checked standard RRF hybrid retrieval. Saved all three baseline rankings for six development queries; TF-IDF and MiniLM disagree at the top on two of them. Eleven tests pass. The test split remains held out. Next: identifier extraction and conflict detection.
+
+## 2026-10-18 — Stage 06 complete
+Added and tested identifier extraction for CVEs and ESP32 variants, including Unicode dashes, original text spans, generic-vs-variant distinction, and conservative same-family conflicts. Fourteen tests pass. This stage changes no rankings. Next: the explainable scoring adjustment.

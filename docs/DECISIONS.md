@@ -31,3 +31,6 @@
 
 ## 2026-10-18 — Stage 05
 - RRF k=60 and full ranks are used for this 31-document pilot; compare identical document universes. No tuning is performed by this baseline.
+
+## 2026-10-18 — Stage 06
+- Support only explicit CVEs and ESP32 model variants of C/S/H/P plus numeric suffix; IEEE 802.11 is outside this pilot. Deduplicate repeated canonical IDs, preserve first original span. A same-family conflict requires explicit variants on both sides and no requested variant from that family in the document. The generic ESP32 alone never constitutes an explicit wrong variant.

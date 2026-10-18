@@ -1,0 +1,14 @@
+{
+  "stage": "06",
+  "status": "PASS",
+  "tests": "14 passed",
+  "supported": [
+    "CVE",
+    "ESP32 and explicit C/S/H/P numeric variants"
+  ],
+  "not_supported": [
+    "IEEE Wi-Fi standards",
+    "arbitrary device families"
+  ],
+  "next": "07"
+}
