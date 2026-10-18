@@ -1,0 +1,52 @@
+{
+  "valid": true,
+  "errors": [],
+  "documents": 31,
+  "query_types": {
+    "dev": {
+      "identifier": 5,
+      "natural": 1
+    },
+    "test": {
+      "identifier": 10,
+      "natural": 2
+    }
+  },
+  "sha256": {
+    "corpus.jsonl": "9688913d0a56067872568ea0402d0eec01ff21924dff55dead570e8f2662d803",
+    "queries_dev.jsonl": "ee266210db7fda68659afeaae28a7067a51cf13e8feae8d72480067c7b7a3a3e",
+    "queries_test.jsonl": "6c213d02451e013acdb16ba506d24af2b00c8f79eadf67ae52f905f52f14823e",
+    "qrels_dev.tsv": "46054eb8fe51f082b74553f374f68b7bc709b0c6a557d7d75df3613e6ecbfdb5",
+    "qrels_test.tsv": "8dc288044e4a561ff4004a77d2ff3de51f540d06347e8b12ab938eb196fe2f3e",
+    "provenance.csv": "c897726f362bccd3b702ded6a0539c7baad97b6a0b64e2ec2a083001be167ebc"
+  },
+  "note": "Structural validation cannot verify near-duplicates, source rights, or relevance completeness.",
+  "sha256_all": {
+    "annotation_guidelines.md": "4fe539a13c130b2531cffa18507161a0df04405c364a1760e48fb55ed5120e1d",
+    "corpus.jsonl": "9688913d0a56067872568ea0402d0eec01ff21924dff55dead570e8f2662d803",
+    "judgment_evidence_dev.csv": "44663ed10d240a3f24051641104bc3a8af43265fe4d6c046c4c81c7fbc5c1673",
+    "judgment_evidence_test.csv": "b61b86d5533f7ecd63af8ef7a3773f7e14aaa5a7fc8f2bf1b44973680acbb589",
+    "LICENSES/CVE_TERMS.html": "45ca6e9d0af4b50a9b7d1246cbc6ab1585ff4213e8c70c8733ebaeb4d9a152e2",
+    "LICENSES/MIT.txt": "c3b1b78bc8bd3ea13aa4bc9778442d16560270afa235006d816e5e88cef24db4",
+    "NOTICE.md": "fd52e6d229a9cc8017288df7797a3abc085ed662a3b8bcd42c31ac2c578d1460",
+    "provenance.csv": "c897726f362bccd3b702ded6a0539c7baad97b6a0b64e2ec2a083001be167ebc",
+    "qrels_dev.tsv": "46054eb8fe51f082b74553f374f68b7bc709b0c6a557d7d75df3613e6ecbfdb5",
+    "qrels_test.tsv": "8dc288044e4a561ff4004a77d2ff3de51f540d06347e8b12ab938eb196fe2f3e",
+    "queries_dev.jsonl": "ee266210db7fda68659afeaae28a7067a51cf13e8feae8d72480067c7b7a3a3e",
+    "queries_test.jsonl": "6c213d02451e013acdb16ba506d24af2b00c8f79eadf67ae52f905f52f14823e"
+  },
+  "description": "31-passage agent-curated pilot, frozen before retrieval comparisons; source-conditioned queries, no independent human review",
+  "cross_split_max_token_jaccard": 0.3125,
+  "judgments": {
+    "dev": {
+      "positive": 6,
+      "explicit_negative": 10,
+      "unjudged": 170
+    },
+    "test": {
+      "positive": 13,
+      "explicit_negative": 17,
+      "unjudged": 342
+    }
+  }
+}

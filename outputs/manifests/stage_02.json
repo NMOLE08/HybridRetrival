@@ -1,13 +1,16 @@
 {
   "stage": "02",
-  "status": "PARTIAL",
+  "status": "PASS_PILOT",
   "date": "2026-10-18",
-  "source_candidates": 31,
-  "tests": "3 passed; empty dataset correctly rejected",
-  "next": "Curate and annotate benchmark; freeze test and pass validation before stage 03",
+  "passages": 31,
+  "dev_queries": 6,
+  "test_queries": 12,
+  "tests": "5 passed; validator passed; rebuild hashes identical",
+  "next": "03",
   "limitations": [
-    "No benchmark or qrels",
-    "No human independent review",
-    "No retrieval results"
-  ]
+    "Single-agent source-conditioned annotation",
+    "Unjudged pairs and small sample",
+    "Not paper-sized or independently human-reviewed"
+  ],
+  "dataset_manifest": "outputs/manifests/dataset_summary.json"
 }

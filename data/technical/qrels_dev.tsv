@@ -1,0 +1,17 @@
+query_id	doc_id	relevance
+dev01	cve-2024-3094	1
+dev01	cve-2021-44228	0
+dev02	cve-2014-6271	1
+dev02	cve-2014-0160	0
+dev03	cve-2021-45105	1
+dev03	cve-2021-44228	0
+dev03	cve-2021-45046	0
+dev03	cve-2021-44832	0
+dev04	esp32c2	1
+dev04	esp32c3	0
+dev04	esp32c6	0
+dev05	esp32s2	1
+dev05	esp32s3	0
+dev05	esp32p4	0
+dev06	cve-2020-0601	1
+dev06	cve-2020-1472	0

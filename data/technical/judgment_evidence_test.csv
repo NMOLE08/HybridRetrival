@@ -1,0 +1,31 @@
+query_id,doc_id,relevance,reason,reviewer
+test01,cve-2021-44228,1,Source passage directly describes the entity and requested feature; see corpus text.,agent
+test01,cve-2021-45046,1,Explicitly discusses the incomplete CVE-2021-44228 fix and related JNDI lookup behavior.,agent
+test01,cve-2021-44832,0,Passage concerns a different entity or mechanism and does not directly answer the stated query.,agent
+test01,cve-2021-45105,0,Passage concerns a different entity or mechanism and does not directly answer the stated query.,agent
+test02,cve-2014-0160,1,Source passage directly describes the entity and requested feature; see corpus text.,agent
+test02,cve-2014-6271,0,Passage concerns a different entity or mechanism and does not directly answer the stated query.,agent
+test03,cve-2017-5638,1,Source passage directly describes the entity and requested feature; see corpus text.,agent
+test03,cve-2018-11776,0,Passage concerns a different entity or mechanism and does not directly answer the stated query.,agent
+test04,cve-2022-22965,1,Source passage directly describes the entity and requested feature; see corpus text.,agent
+test04,cve-2017-5638,0,Passage concerns a different entity or mechanism and does not directly answer the stated query.,agent
+test05,cve-2023-34362,1,Source passage directly describes the entity and requested feature; see corpus text.,agent
+test05,cve-2023-4863,0,Passage concerns a different entity or mechanism and does not directly answer the stated query.,agent
+test06,cve-2019-19781,1,Source passage directly describes the entity and requested feature; see corpus text.,agent
+test06,cve-2019-0708,0,Passage concerns a different entity or mechanism and does not directly answer the stated query.,agent
+test07,esp32s3,1,Source passage directly describes the entity and requested feature; see corpus text.,agent
+test07,esp32s2,0,Passage concerns a different entity or mechanism and does not directly answer the stated query.,agent
+test07,esp32c3,0,Passage concerns a different entity or mechanism and does not directly answer the stated query.,agent
+test08,esp32c3,1,Source passage directly describes the entity and requested feature; see corpus text.,agent
+test08,esp32c2,0,Passage concerns a different entity or mechanism and does not directly answer the stated query.,agent
+test08,esp32s3,0,Passage concerns a different entity or mechanism and does not directly answer the stated query.,agent
+test09,esp32c6,1,Source passage directly describes the entity and requested feature; see corpus text.,agent
+test09,esp32c5,0,Passage concerns a different entity or mechanism and does not directly answer the stated query.,agent
+test09,esp32c3,0,Passage concerns a different entity or mechanism and does not directly answer the stated query.,agent
+test10,esp32p4,1,Source passage directly describes the entity and requested feature; see corpus text.,agent
+test10,esp32s3,0,Passage concerns a different entity or mechanism and does not directly answer the stated query.,agent
+test10,esp32c6,0,Passage concerns a different entity or mechanism and does not directly answer the stated query.,agent
+test11,cve-2019-0708,1,Source passage directly describes the entity and requested feature; see corpus text.,agent
+test11,cve-2017-0144,0,Passage concerns a different entity or mechanism and does not directly answer the stated query.,agent
+test12,cve-2023-4863,1,Source passage directly describes the entity and requested feature; see corpus text.,agent
+test12,cve-2023-34362,0,Passage concerns a different entity or mechanism and does not directly answer the stated query.,agent

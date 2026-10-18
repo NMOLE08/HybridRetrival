@@ -10,3 +10,8 @@ Initialized Git and saved Stage 00 as commit 5044286. Created the package skelet
 
 ## 2026-10-18 — Stage 02 started, not yet complete
 Located 31 candidate records from official CVE and Espressif repositories, pinned their source revisions, and recorded SHA-256 hashes. Created a repeatable source fetcher and a validator for dataset structure; the test suite currently has 3 passing tests. The source records are not yet a benchmark: the short passages, relevance judgments, separate development and test queries, rights notices, and test freeze still need to be completed and reviewed. No model, baseline or experimental result exists yet.
+
+## 2026-10-18 — Stage 02 pilot completed
+Built and froze a small, auditable benchmark: 31 source-derived passages, 6 development queries and 12 test queries. Source links, notices, hashes, judgments and evidence are included. A related Log4j record was correctly included as an additional positive instead of assuming only the source passage was relevant. Structural validation and five tests pass; rebuilding produces identical file hashes.
+
+This is a smoke-test pilot, not a paper-sized dataset: queries and labels are agent-created and have not received independent human review, and many document pairs are unjudged. The held-out test set must remain untouched until the scoring method and parameters are frozen. Next: Stage 03, reproduce pretrained MiniLM retrieval.

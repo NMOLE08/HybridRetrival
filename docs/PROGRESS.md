@@ -38,3 +38,15 @@
 - Risks and unresolved problems: No curated passages, source-specific redistribution notices, relevance judgments, query split, near-duplicate audit, held-out hashes, or independent human review exist. The candidate records include code as well as technical vulnerability descriptions and require assessment for study suitability. Structural validation cannot confirm semantic correctness or exhaustive judgments.
 - Next exact action: Review source rights and 31 candidates; construct a small short-passage pilot and explicitly agent-authored dev/test queries; review every plausible positive and hard negative against evidence; complete provenance, freeze and hash the test split, and pass the Stage 02 validation and review gate before Stage 03.
 - Commit: see Git history for partial checkpoint.
+
+### Stage 02 — Pilot benchmark freeze
+- Status: PASS for the plan's small pilot gate, with incomplete judgments and no independent review; not a paper-scale benchmark.
+- Date/time: 2026-10-18 (Asia/Kolkata).
+- Work completed: Created 31 source-derived passages, 6 dev and 12 held-out test queries, source-backed positive and audited negative qrels, annotation evidence, provenance and license notices. Assessed exact CVE cross-references across the corpus and added the Log4j cross-reference as a second positive. Per-chip source-code snippets retain their original lines. Recorded dev/test query overlap, hashes and limitations before any model or ranking comparisons.
+- Files: data/technical/, docs/DATASET_CARD.md, scripts/build_benchmark.py, tests/test_pilot_data.py, .gitattributes, outputs/manifests/dataset_summary.json.
+- Commands: `python scripts/collect_technical_corpus.py`; `python scripts/build_benchmark.py`; `python scripts/validate_dataset.py data/technical`; `python -m pytest -q`; rebuilt and checked every recorded file hash.
+- Verification: Validator passed, 5 tests passed, rebuilt files matched recorded SHA-256 hashes. No repeated query IDs or exact text between splits; maximum token Jaccard 0.3125, not proof of semantic independence.
+- Measured results: 31 passages; dev 5 identifier / 1 natural, test 10 identifier / 2 natural. Dev has 6 positive and 10 explicit negative judgments; test has 13 positive and 17 explicit negatives; all other pairs are unjudged. No retrieval measurements.
+- Decisions / limitations: Pilot below paper target; agent-authored, source-conditioned queries and non-independent labels; source code snippets in addition to prose. Exact corpus coverage does not prove all relevant judgments have been found; unjudged pairs are not treated as explicit negatives. CVE current terms were checked in site bundle and notices included. The plan's human-origin-only schema was extended with `agent_authored` to avoid misrepresentation.
+- Next exact stage: Stage 03 pretrained MiniLM semantic baseline; test split and qrels remain frozen and unused for model/rule design or tuning.
+- Commit hash: see Git history for Stage 02 freeze checkpoint.
