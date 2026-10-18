@@ -134,12 +134,12 @@
 - Commit: see Git history for the config freeze commit.
 
 ### Stage 10 — Held-out experiments and optional SciFact check
-- Status: IN PROGRESS; the primary ranking-repeat gate has passed, and the optional secondary evaluation is indexing.
+- Status: PASS for the primary acceptance gate; the optional secondary evaluation is deferred due to substantial CPU indexing time and continues separately.
 - Date/time: 2026-10-18 (Asia/Kolkata).
 - Work completed: Ran the frozen methods on all 12 held-out technical queries; repeated all rankings before reading test judgments and reconstructed the metric summaries from the stored ranking file. Downloaded the official SciFact archive with TLS verification through the system trust store, checked the published MD5 and recorded SHA-256 hashes.
 - Files: `scripts/run_experiments.py`, `scripts/evaluate_rankings.py`, `scripts/fetch_scifact.py`, `scripts/run_scifact.py`, `outputs/final/`, and the final-run and SciFact download manifests.
 - Commands/tests: `python scripts/run_experiments.py`, `python scripts/evaluate_rankings.py` (separate reconstruction), `python scripts/fetch_scifact.py`, `python scripts/run_scifact.py` (running), and `python -m pytest -q` (21 passed).
 - Primary results: On the 10 identifier queries, RRF and the selected proposed method both have MRR@10 0.875, Recall@5 1.0, and one observed wrong identifier with one unknown outcome. The dev-selected weights are both zero. The fixed nonzero sensitivity method has MRR@10 1.0, but is exploratory; its paired bootstrap MRR difference against RRF is 0.125 with percentile interval [0, 0.3] across only 10 queries.
 - Risks: The pilot's agent-authored, source-conditioned queries and non-independently reviewed, incomplete labels limit generalization. Timing is sequential CPU component timing, not end-to-end latency. SciFact is not direct evidence about technical identifiers.
-- Next exact step: collect and validate the optional SciFact run, then finalize this stage before beginning figures and analysis.
+- Next exact stage: Stage 11 figures and analysis. Collect and validate the optional SciFact run if it finishes; its completion is not required for the primary acceptance gate.
 - Commit: see Git history for the frozen runner and primary results checkpoints.
