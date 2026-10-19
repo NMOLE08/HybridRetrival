@@ -178,13 +178,13 @@
 - Next exact stage: Stage 14 only after the protocol is committed; then source collection, new split and review package before any dev selection.
 - Commit: see the Stage 13 Git checkpoint.
 
-### Stage 14 — Enlarged benchmark (in progress)
-- Status: IN PROGRESS; no acceptance gate claimed.
+### Stage 14 — Enlarged benchmark and initial review package
+- Status: PROVISIONAL / BLOCKED; the acceptance gate is not met.
 - Date/time: 2026-10-19 (Asia/Kolkata).
-- Work completed: Before inspecting newly collected source passages or rankings, drafted 70 agent-authored information needs (18 identifier/6 natural dev, 34 identifier/12 natural test); selected new CVE entities and split ESP variants. Queries are explicitly unreviewed and their factual premises, topic separation and relevance remain unverified. An initial draft was preserved when hardware-topic allocation was revised before source access.
-- Files: `scripts/draft_phase2_needs.py`, `data/phase2/needs_draft.jsonl`, `outputs/phase2/drafts/needs_initial.jsonl`.
-- Commands/tests: `python scripts/draft_phase2_needs.py`; draft counts inspected. No Phase 2 retrieval was run.
-- Source rights: Official CVE repository points to CVE Program terms; Espressif per-file license headers must be checked for each source. No new passages collected yet.
-- Risks: Draft wording is agent-authored, so it is not independent human query authorship or independent relevance judgment; may contain false assumptions or semantic overlap. The Apache CVE pair stays within test but must be checked for cross-references.
-- Next exact action: checkpoint these question-first drafts, then collect and hash official sources and validate evidence and licensing. Never infer relevance from draft query text.
+- Work completed: Before inspecting new record contents or rankings, checkpointed 70 agent-authored information needs (18 identifier/6 natural dev, 34 identifier/12 natural test). Collected 90 pinned CVE records and split 10 verified-license Espressif headers into 60 source chunks. Produced a source-backed, blinded initial review package with 241 candidate pairs, all unjudged; no rankings or qrels were created. Initial drafts and review package are preserved.
+- Files: `data/phase2/`, `scripts/draft_phase2_needs.py`, `collect_phase2_sources.py`, `build_phase2_corpus.py`, `prepare_phase2_review.py`, `validate_phase2.py`, `tests/test_phase2_draft.py`, `docs/PHASE2_DATASET_CARD.md`, `PHASE2_ANNOTATION_GUIDELINES.md`, `PHASE2_REVIEW_REPORT.md`, `outputs/phase2/manifests/` and `logs/stage_14_collection.txt`.
+- Commands/tests: source collector (90 selected, zero target fetch failures), corpus builder (150 passages), review preparation (70 needs/241 pairs), validator (no structural errors; provisional), `python -m pytest -q -p no:cacheprovider` (23 passed), and `python scripts/audit_phase1.py --output outputs/phase2/manifests/phase1_integrity_stage14.json` (54 protected Phase 1 files match). A source-inspection console command failed due to Windows Unicode encoding; raw files remain intact.
+- Source rights: Official CVE repository points to CVE Program terms; the pinned Espressif headers individually declare Apache-2.0 OR MIT, with the MIT option and notices retained. Source-specific hashes and URLs are in `provenance.csv` and the collection manifest. Documentation rights are not inferred from code rights.
+- Comparison / limitations: No Phase 2 measurements exist. Three hardware needs lack initial matching target evidence; two development needs resemble inspected Phase 1 test questions; only two cross-reference queries meet the initial explicit-source candidate rule versus the target five; semantic independence and near misses remain unreviewed. Hardware excerpts may lack preprocessor context. All relevance and query validity are unreviewed, with no independent reviewer or confirmed positive labels.
+- Next exact action: A real independent human must review the concrete package and return question and relevance judgments with evidence and reviewer provenance; resolve three evidence gaps, two old-test similarities, cross-reference shortfall and split validity before dataset freeze. Do not start Stage 15's retrieval pooling, Stage 16 tuning or final evaluation while this gate is unmet.
 - Commit: see Phase 2 Git history.

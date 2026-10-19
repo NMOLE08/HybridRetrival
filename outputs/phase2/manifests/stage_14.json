@@ -1,0 +1,12 @@
+{
+  "stage": 14,
+  "status": "PROVISIONAL_BLOCKED_HUMAN_REVIEW",
+  "date": "2026-10-19",
+  "work": "Created 70 question-first draft needs, collected 90 official CVE records, produced 60 pinned Espressif source excerpts and prepared 241 unjudged source-evidence pairs for blind human review.",
+  "verification": "23 tests passed; source and corpus hashes validated with no structural errors; 54 protected Phase 1 artifacts still match the reference.",
+  "results": "No Phase 2 retrieval, training, tuning, qrels, human labels or metrics; no Phase 2 test freeze.",
+  "rights": "Official CVE Program terms and per-file Espressif Apache-2.0 OR MIT licenses; notices and raw files retained.",
+  "unresolved": ["No independent human judgments", "Three hardware needs lack initial expected-macro evidence", "Two dev needs resemble inspected Phase 1 test questions", "Only two query-level cross-reference candidates versus target five", "Unreviewed near-miss and split quality", "Potential lost preprocessor context"],
+  "gate": "Independent human review, evidence repair and split/quality validation are required before dataset freeze and later development selection.",
+  "commit": "See Phase 2 Git history."
+}

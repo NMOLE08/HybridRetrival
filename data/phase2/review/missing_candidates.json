@@ -1,0 +1,14 @@
+[
+  {
+    "need_id": "esp-08",
+    "reason": "No chunk containing expected macro for target variant; do not assume a negative. All source chunks for that variant are offered as context."
+  },
+  {
+    "need_id": "esp-11",
+    "reason": "No chunk containing expected macro for target variant; do not assume a negative. All source chunks for that variant are offered as context."
+  },
+  {
+    "need_id": "esp-13",
+    "reason": "No chunk containing expected macro for target variant; do not assume a negative. All source chunks for that variant are offered as context."
+  }
+]

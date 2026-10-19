@@ -1,0 +1,61 @@
+{
+  "status": "PROVISIONAL",
+  "structural_errors": [],
+  "documents": 150,
+  "families": {
+    "cve": 90,
+    "esp32": 60
+  },
+  "queries": 70,
+  "split_type_counts": {
+    "dev:identifier": 18,
+    "test:identifier": 34,
+    "dev:natural": 6,
+    "test:natural": 12
+  },
+  "exact_old_test_query_overlap": 0,
+  "exact_topic_overlap": [],
+  "cross_split_jaccard_ge_0_60": [],
+  "old_test_jaccard_ge_0_60": [
+    {
+      "phase2": "esp-01",
+      "phase1_test": "test08",
+      "token_jaccard": 0.6364
+    },
+    {
+      "phase2": "esp-02",
+      "phase1_test": "test07",
+      "token_jaccard": 0.6364
+    }
+  ],
+  "missing_initial_evidence": [
+    {
+      "need_id": "esp-08",
+      "reason": "No chunk containing expected macro for target variant; do not assume a negative. All source chunks for that variant are offered as context."
+    },
+    {
+      "need_id": "esp-11",
+      "reason": "No chunk containing expected macro for target variant; do not assume a negative. All source chunks for that variant are offered as context."
+    },
+    {
+      "need_id": "esp-13",
+      "reason": "No chunk containing expected macro for target variant; do not assume a negative. All source chunks for that variant are offered as context."
+    }
+  ],
+  "review": {
+    "queries": 70,
+    "candidate_pairs": 241,
+    "needs_without_initial_evidence": 3,
+    "cross_reference_query_count": 2,
+    "human_reviewed_pairs": 0,
+    "seed": 42,
+    "note": "Candidate selection uses explicit source IDs and macro-name lookups, not retrieval rankings; all relevance fields are unjudged."
+  },
+  "pair_rows": 241,
+  "human_reviewed_rows": 0,
+  "limits": [
+    "Token overlap is a screening heuristic, not a semantic independence test.",
+    "All questions and candidate pairs are unreviewed drafts; a match is not a positive judgment.",
+    "Sample, confusable and cross-reference targets and human-review gate are not yet met."
+  ]
+}

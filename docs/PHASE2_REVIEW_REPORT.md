@@ -1,0 +1,7 @@
+# Phase 2 review status
+
+**Status: BLOCKED on independent human review; Stage 14 remains provisional.** No independent human query review, relevance judgments, second-rater agreement or adjudication has occurred. No Phase 2 qrels, development tuning, selected weights, test rankings or effectiveness results exist.
+
+The initial [question review](../data/phase2/review/question_review.csv) lists 70 agent-authored draft needs. The blinded [candidate review](../data/phase2/review/candidate_pairs.csv) lists 241 source-based pairs, all unjudged. It contains no method labels or retrieval rankings. A real reviewer must follow [the annotation instructions](PHASE2_ANNOTATION_GUIDELINES.md), identify themselves or use a stable pseudonym, state independence and supply UTC timestamps, evidence and judgments. Zero pairs are human reviewed; a second reviewer and disagreement rate are not available.
+
+Outstanding validity checks: three target hardware questions have no initial matching macro; two dev questions resemble old pilot test queries; only two cross-reference-query candidates are currently identified against a target of five; human review must determine relevance and any query revisions. Header chunks can omit preprocessor context. Question and evidence validation plus overlap review must be complete before benchmark freeze. Do not interpret unjudged candidates as positives or negatives. Subsequent development and final-test ranking pools require separate blind review as prescribed in the protocol.

@@ -1,0 +1,16 @@
+[
+  {
+    "need_id": "cve-21",
+    "target": "cve-2021-41773",
+    "candidates": [
+      "cve-2021-42013"
+    ]
+  },
+  {
+    "need_id": "cve-35",
+    "target": "cve-2021-42013",
+    "candidates": [
+      "cve-2021-41773"
+    ]
+  }
+]

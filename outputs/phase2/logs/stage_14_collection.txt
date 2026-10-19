@@ -1,0 +1,13 @@
+Command: .venv\Scripts\python.exe scripts/collect_phase2_sources.py
+The sandbox network attempt against the CVE API failed with WinError 10013. An elevated network request to the official API succeeded (HTTP 200), then this collector was run with network access.
+Fetched 96 candidates; 96 usable so far. Selected 90 records; failed 0; missing draft targets 0. SHA-256 and pinned URLs are recorded in outputs/phase2/manifests/source_collection.json. Extra fetched but unselected records were not used as data.
+The first candidate-list concatenation unintentionally selected all 54 distractors from 2022. Its source manifest, corpus, provenance, validation and review package are preserved under outputs/phase2/drafts/. Before any Phase 2 retrieval or relevance judgment, the collector was corrected to interleave the three year lists. The second collection again selected 90 records with zero target failures; the 54 distractors are evenly divided (18 each) among 2022, 2023 and 2024. Both attempts and retained raw source files are preserved.
+Command: .venv\Scripts\python.exe scripts/build_phase2_corpus.py
+Built 150 provisional passages: 90 CVE and 60 SoC chunks.
+Command: .venv\Scripts\python.exe scripts/prepare_phase2_review.py
+Initial package: 232 candidate pairs, with insufficient target context for three missing-macro needs. Preserved in outputs/phase2/drafts/review_initial; revised package offers target-source chunks for those needs and contains 241 pairs. The balanced-source package also contains 241 pairs. All are unjudged.
+Command: .venv\Scripts\python.exe scripts/validate_phase2.py
+No structural errors; 150 docs, 70 needs, 3 missing initial source-evidence needs, 0 human-reviewed pairs, 0 cross-split token-similarity flags and 2 flags against Phase 1 test. Status PROVISIONAL.
+One console-only source-description inspection exited 1 because the Windows console could not encode U+202F (UnicodeEncodeError); source files and hashes remained intact. No retrieval or relevance-label evaluation was run.
+Command: .venv\Scripts\python.exe -m pytest -q -p no:cacheprovider
+23 passed in 6.39s.

@@ -1,0 +1,9 @@
+{
+  "queries": 70,
+  "candidate_pairs": 241,
+  "needs_without_initial_evidence": 3,
+  "cross_reference_query_count": 2,
+  "human_reviewed_pairs": 0,
+  "seed": 42,
+  "note": "Candidate selection uses explicit source IDs and macro-name lookups, not retrieval rankings; all relevance fields are unjudged."
+}
