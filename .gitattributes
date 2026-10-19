@@ -4,3 +4,4 @@
 data/technical/*.md text eol=lf
 data/technical/LICENSES/* -text
 configs/final.yaml text eol=lf
+configs/phase2_*.yaml text eol=lf

@@ -1,0 +1,7 @@
+Command: .venv\Scripts\python.exe -c "import os,runpy; os.environ['HF_HUB_OFFLINE']='1'; runpy.run_path('scripts/reproduce.py',run_name='__main__')"
+Result: exit 0
+Offline use of the already-cached model succeeded.
+Ranking rows: 2604; queries: 12; methods: minilm, proposed, proposed_fixed, rrf, rrf_bonus, rrf_bonus_fixed, tfidf; repeat checks: 12.
+Wrote 5 figures (SVG and PNG), identifier metrics, case studies, and bootstrap table from saved run files.
+PASS: recorded ranks and metrics reproduced; new run and figures: cache\reproductions\20261019T063432979748Z
+The separate cache directory is ignored by Git; the committed Phase 1 reference files were not overwritten.

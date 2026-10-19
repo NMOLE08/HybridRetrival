@@ -1,0 +1,16 @@
+{
+  "stage": 13,
+  "status": "PASS",
+  "date_time": "2026-10-19T12:07:04+05:30",
+  "branch": "phase2",
+  "phase1_reference": "60405f7701b898aad6e753e5f441b73195d04cfa",
+  "phase1_audit": "54 reference-tracked protected code, dataset, configuration, result and manifest files matched Git; local SHA-256 and machine metadata in phase1_hashes.json.",
+  "test": "21 passed; one PytestCacheWarning due to sandbox WinError 5 writing existing pytest cache.",
+  "reproduction": "PASS, offline cached model; 2604 ranking rows and metric summaries matched; figures regenerated in cache/reproductions/20261019T063432979748Z.",
+  "protocol_sha256": "2065532d0e21739b803d3f8159553ca3219eb2d68999475ecf10677f7eb48cff",
+  "prose_protocol_sha256": "e8f140548081b45f9e76433c9bd0f4621f396597a1792a331804c3d1b7b53eb5",
+  "results": "No Phase 2 retrieval results or labels produced; Phase 1 remains historical.",
+  "source_rights": "Prospective official CVE and Espressif sources only after per-source terms verification; unknown rights excluded.",
+  "risks": "No independent human reviewers or Phase 2 data exist yet. Original pilot remains small and agent-labeled.",
+  "next_gate": "Commit the protocol before Phase 2 data collection and evaluation, then Stage 14."
+}

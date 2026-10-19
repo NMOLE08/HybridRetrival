@@ -1,0 +1,59 @@
+protocol_version: 1
+created_date: '2026-10-19'
+phase1_reference: 60405f7701b898aad6e753e5f441b73195d04cfa
+phase1_role: historical descriptive comparison and regression only
+seed: 42
+device: cpu
+model: sentence-transformers/all-MiniLM-L6-v2
+model_revision: 1110a243fdf4706b3f48f1d95db1a4f5529b4d41
+rrf_k: 60
+candidate_policy: full_corpus
+identifier_families: [cve, esp32]
+primary_comparison: dev_selected_identifier_aware_vs_rrf
+primary_endpoint: identifier_query_mrr_at_10
+secondary_endpoints: [recall_at_5, binary_ndcg_at_10, wrong_identifier_at_1_bounds, warm_component_latency, natural_query_invariance]
+weight_grid:
+  match: [0.0, 0.003, 0.006, 0.012]
+  conflict: [0.0, 0.003, 0.006]
+selection: [maximize_identifier_mrr_at_10, minimize_wrong_id_upper_bound, maximize_recall_at_5, minimize_sum_of_weights, minimize_match_weight, minimize_conflict_weight]
+illustrative_nonzero:
+  match: 0.003
+  conflict: 0.003
+  role: fixed illustrative sensitivity only; never selected automatically
+bootstrap: {seed: 42, resamples: 10000, unit: query, interval: percentile_95}
+targets:
+  passages: 150
+  cve_passages: 90
+  esp32_passages: 60
+  dev_queries: 24
+  test_queries: 46
+  dev_identifier_queries: 18
+  dev_natural_queries: 6
+  test_identifier_queries: 34
+  test_natural_queries: 12
+  identifier_query_near_miss_minimum: 30
+  cross_reference_queries_minimum: 5
+  multi_identifier_document_queries_minimum: 5
+  double_review_fraction_target: 0.20
+  note: targets are not evidence of statistical power and may not be met
+source_policy:
+  cve: pinned official CVE records with verified applicable redistribution terms and retained notices
+  esp32: pinned official Espressif passages with per-file verified permissive reuse license and retained notices
+  other: exclude unless rights, version, source and attribution are independently verified before inclusion
+  rights_unknown: exclude
+review_policy:
+  reviewer: independent real human; record identity or stable pseudonym, independence and time
+  pending_label: unknown
+  positive: directly answers stated information need with evidence; cross_references may qualify
+  negative: explicitly reviewed and does not answer the need
+  ambiguous: unknown until adjudicated
+  test_requirement: all proposed test positives and pooled likely top conflicting candidates independently reviewed
+  pool: top10 lexical dense rrf and predeclared illustrative full reranker; blind method identifiers
+  dev_pool_before_selection: true
+  test_pool_after_method_freeze: true
+stopping_rules:
+  - stop before paper_grade_final_evaluation if independent human review is absent or unverified
+  - stop before selection if development identifier queries lack reviewed positives or required evidence
+  - stop before frozen final evaluation if any test query lacks an independently reviewed positive
+  - mark dataset provisional and document shortfalls if sources, rights, sample targets or review effort are insufficient
+  - never modify phase1 artifacts, infer unknown labels, or tune on phase1 test or phase2 test

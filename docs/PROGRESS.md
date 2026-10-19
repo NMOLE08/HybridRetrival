@@ -166,3 +166,14 @@
 - Next exact step: independent human annotation, expanded benchmark and new untouched final test for any paper-grade effectiveness claim; complete SciFact separately if desired.
 - Commit: see Git history.
 
+### Stage 13 — Phase 1 audit and Phase 2 protocol
+- Status: PASS after the protocol checkpoint is committed; the Phase 1 baseline reproduction matched.
+- Date/time: 2026-10-19 12:07 (Asia/Kolkata).
+- Work completed: Created `phase2` from reference `60405f7`; audited 54 protected tracked Phase 1 artifacts; wrote preregistered hypothesis, sample targets, source rights policy, split and annotation rules, development-only grid and review gates.
+- Files: `docs/PHASE2_PROTOCOL.md`, `docs/PHASE2_HISTORY.md`, `configs/phase2_protocol.yaml`, `scripts/audit_phase1.py`, `outputs/phase2/manifests/`, `outputs/phase2/logs/`, `.gitattributes`, decisions and updates.
+- Commands/tests: `.venv\Scripts\python.exe -m pytest -q` (21 passed; one pytest-cache permission warning); offline `.venv\Scripts\python.exe` execution of `scripts/reproduce.py` (2,604 rows and metric summaries matched, figures regenerated); `python scripts/audit_phase1.py` (54 protected files match reference); YAML/grid/target assertions passed.
+- Comparison: The Phase 1 reproduction matches stored rankings and metrics. No Phase 2 retrieval or tuning has occurred. Previous selected weights remain (0,0), and the prior nonzero pilot comparison remains exploratory.
+- Sources/rights: Prospective CVE and Espressif materials require source-specific verified reuse rights and preserved notices; uncertain rights are excluded. No new documents have been acquired.
+- Risks: Independent human review is not yet available or assumed. The original test was inspected and cannot serve as the Phase 2 holdout. The full dataset and query targets are prospective only.
+- Next exact stage: Stage 14 only after the protocol is committed; then source collection, new split and review package before any dev selection.
+- Commit: see the Stage 13 Git checkpoint.

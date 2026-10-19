@@ -47,3 +47,9 @@
 ## 2026-10-18 — Stage 10 primary run
 - Completed held-out rankings with the frozen no-op primary and the previously specified nonzero exploratory variants. Test ranks were repeated before judgments were read; metrics were reconstructed independently. No scorer or parameter changes were made. SciFact secondary check is in progress.
 - BEIR SciFact download initially failed certificate verification with Python default TLS; using the installed truststore package with the OS certificate store succeeded without disabling TLS verification. The archive matches the BEIR published MD5.
+
+## 2026-10-19 — Phase 2 Stage 13
+- Begin from immutable Phase 1 commit 60405f7 on a separate `phase2` branch. Phase 1 test results are historical only; they do not choose Phase 2 weights. An audit records local hashes of 54 protected tracked artifacts and confirms no Git content differences against the reference.
+- Lock the Phase 2 protocol before new data collection or evaluation. The primary endpoint is identifier-subset MRR@10 versus RRF; tune on reviewed new development queries only. The old nonzero setting is a fixed illustrative comparison, not an automatic selection.
+- Target 150 source-backed passages and 70 new queries with evidence-backed confusables and explicit domain balance. Source rights, target shortfalls, author provenance, semantic overlap and human review must be documented; target counts are not a power claim. No new identifier families or model training are planned.
+- Actual independent human review is required before paper-grade held-out evaluation. If unavailable, stop at the review gate; unjudged and ambiguous pairs remain unknown. Source-conditioned questions and agent labels must be identified honestly.

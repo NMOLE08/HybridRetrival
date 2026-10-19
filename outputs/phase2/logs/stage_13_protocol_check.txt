@@ -1,0 +1,2 @@
+Command: .venv\Scripts\python.exe -c "import yaml; from pathlib import Path; p=yaml.safe_load(Path('configs/phase2_protocol.yaml').read_text()); assert len(p['weight_grid']['match'])*len(p['weight_grid']['conflict'])==12; assert p['targets']['dev_queries']+p['targets']['test_queries']==70; assert p['primary_endpoint']=='identifier_query_mrr_at_10'; print('PASS: protocol parses, grid has 12 settings, query targets total 70, primary endpoint set.')"
+PASS: protocol parses, grid has 12 settings, query targets total 70, primary endpoint set.
