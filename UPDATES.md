@@ -50,3 +50,6 @@ Added the paper outline, exact setup and reproduction instructions, a search CLI
 
 ## 2026-10-19 — Phase 2 Stage 13 complete after checkpoint
 Created a separate `phase2` branch and audited the Phase 1 reference. All 21 tests passed (one pytest-cache write warning); an offline full rerun reproduced all 2,604 ranks and metric summaries. Fifty-four protected Phase 1 artifacts match the reference commit. The new protocol states the research question, source rights, target sample, review requirements, dev-only tuning grid and human-review stopping rule before any Phase 2 evaluation. No new data or Phase 2 measurements have yet been produced. Next: collect and document a new source-backed benchmark, then prepare independent review.
+
+## 2026-10-19 — Phase 2 Stage 14 in progress
+Drafted 70 possible new information needs before reading new source passages or rankings, with development/test group assignments and origin recorded. These are unreviewed agent drafts, not verified labels or human-authored questions. An initial allocation was retained and revised before source collection to reduce shared hardware topics. Next: fetch and validate source-backed passages, check the draft questions and build a review package.

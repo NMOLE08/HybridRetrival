@@ -177,3 +177,14 @@
 - Risks: Independent human review is not yet available or assumed. The original test was inspected and cannot serve as the Phase 2 holdout. The full dataset and query targets are prospective only.
 - Next exact stage: Stage 14 only after the protocol is committed; then source collection, new split and review package before any dev selection.
 - Commit: see the Stage 13 Git checkpoint.
+
+### Stage 14 — Enlarged benchmark (in progress)
+- Status: IN PROGRESS; no acceptance gate claimed.
+- Date/time: 2026-10-19 (Asia/Kolkata).
+- Work completed: Before inspecting newly collected source passages or rankings, drafted 70 agent-authored information needs (18 identifier/6 natural dev, 34 identifier/12 natural test); selected new CVE entities and split ESP variants. Queries are explicitly unreviewed and their factual premises, topic separation and relevance remain unverified. An initial draft was preserved when hardware-topic allocation was revised before source access.
+- Files: `scripts/draft_phase2_needs.py`, `data/phase2/needs_draft.jsonl`, `outputs/phase2/drafts/needs_initial.jsonl`.
+- Commands/tests: `python scripts/draft_phase2_needs.py`; draft counts inspected. No Phase 2 retrieval was run.
+- Source rights: Official CVE repository points to CVE Program terms; Espressif per-file license headers must be checked for each source. No new passages collected yet.
+- Risks: Draft wording is agent-authored, so it is not independent human query authorship or independent relevance judgment; may contain false assumptions or semantic overlap. The Apache CVE pair stays within test but must be checked for cross-references.
+- Next exact action: checkpoint these question-first drafts, then collect and hash official sources and validate evidence and licensing. Never infer relevance from draft query text.
+- Commit: see Phase 2 Git history.

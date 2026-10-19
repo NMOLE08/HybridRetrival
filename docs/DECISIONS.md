@@ -53,3 +53,7 @@
 - Lock the Phase 2 protocol before new data collection or evaluation. The primary endpoint is identifier-subset MRR@10 versus RRF; tune on reviewed new development queries only. The old nonzero setting is a fixed illustrative comparison, not an automatic selection.
 - Target 150 source-backed passages and 70 new queries with evidence-backed confusables and explicit domain balance. Source rights, target shortfalls, author provenance, semantic overlap and human review must be documented; target counts are not a power claim. No new identifier families or model training are planned.
 - Actual independent human review is required before paper-grade held-out evaluation. If unavailable, stop at the review gate; unjudged and ambiguous pairs remain unknown. Source-conditioned questions and agent labels must be identified honestly.
+
+## 2026-10-19 — Stage 14 question-first draft
+- Drafted 70 possible information needs before reading newly collected Phase 2 passage content or rankings. These are agent-authored hypotheses, not fact-checked questions or relevance labels. The initial draft was retained after adjusting the dev/test allocation of hardware feature topics before any source acquisition.
+- Query counts reach the prospective target but do not establish data quality, semantic independence or target-case coverage. Source-supported validation and independent reviewer correction are required; do not freeze or treat these drafts as reviewed judgments.
