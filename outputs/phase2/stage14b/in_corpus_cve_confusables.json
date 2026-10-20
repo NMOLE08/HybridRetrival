@@ -1,0 +1,92 @@
+[
+  {
+    "need_id": "cve-02",
+    "target": "CVE-2023-20198",
+    "other": "CVE-2023-0898",
+    "edit_distance": 2,
+    "source_url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/f36061cc9d42937cd6a7a7321a89da7ef625a190/cves/2023/0xxx/CVE-2023-0898.json",
+    "already_in_initial_review": false,
+    "note": "String similarity is not a relevance judgment; source is an actual pinned record."
+  },
+  {
+    "need_id": "cve-03",
+    "target": "CVE-2024-3400",
+    "other": "CVE-2024-0420",
+    "edit_distance": 2,
+    "source_url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/f36061cc9d42937cd6a7a7321a89da7ef625a190/cves/2024/0xxx/CVE-2024-0420.json",
+    "already_in_initial_review": false,
+    "note": "String similarity is not a relevance judgment; source is an actual pinned record."
+  },
+  {
+    "need_id": "cve-12",
+    "target": "CVE-2022-26134",
+    "other": "CVE-2022-0134",
+    "edit_distance": 2,
+    "source_url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/f36061cc9d42937cd6a7a7321a89da7ef625a190/cves/2022/0xxx/CVE-2022-0134.json",
+    "already_in_initial_review": false,
+    "note": "String similarity is not a relevance judgment; source is an actual pinned record."
+  },
+  {
+    "need_id": "cve-15",
+    "target": "CVE-2023-3519",
+    "other": "CVE-2023-0514",
+    "edit_distance": 2,
+    "source_url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/f36061cc9d42937cd6a7a7321a89da7ef625a190/cves/2023/0xxx/CVE-2023-0514.json",
+    "already_in_initial_review": false,
+    "note": "String similarity is not a relevance judgment; source is an actual pinned record."
+  },
+  {
+    "need_id": "cve-29",
+    "target": "CVE-2022-0847",
+    "other": "CVE-2022-0984",
+    "edit_distance": 2,
+    "source_url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/f36061cc9d42937cd6a7a7321a89da7ef625a190/cves/2022/0xxx/CVE-2022-0984.json",
+    "already_in_initial_review": false,
+    "note": "String similarity is not a relevance judgment; source is an actual pinned record."
+  },
+  {
+    "need_id": "cve-29",
+    "target": "CVE-2022-0847",
+    "other": "CVE-2022-0307",
+    "edit_distance": 2,
+    "source_url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/f36061cc9d42937cd6a7a7321a89da7ef625a190/cves/2022/0xxx/CVE-2022-0307.json",
+    "already_in_initial_review": false,
+    "note": "String similarity is not a relevance judgment; source is an actual pinned record."
+  },
+  {
+    "need_id": "cve-29",
+    "target": "CVE-2022-0847",
+    "other": "CVE-2022-0823",
+    "edit_distance": 2,
+    "source_url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/f36061cc9d42937cd6a7a7321a89da7ef625a190/cves/2022/0xxx/CVE-2022-0823.json",
+    "already_in_initial_review": true,
+    "note": "String similarity is not a relevance judgment; source is an actual pinned record."
+  },
+  {
+    "need_id": "cve-29",
+    "target": "CVE-2022-0847",
+    "other": "CVE-2022-0697",
+    "edit_distance": 2,
+    "source_url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/f36061cc9d42937cd6a7a7321a89da7ef625a190/cves/2022/0xxx/CVE-2022-0697.json",
+    "already_in_initial_review": false,
+    "note": "String similarity is not a relevance judgment; source is an actual pinned record."
+  },
+  {
+    "need_id": "cve-32",
+    "target": "CVE-2022-40684",
+    "other": "CVE-2022-0984",
+    "edit_distance": 2,
+    "source_url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/f36061cc9d42937cd6a7a7321a89da7ef625a190/cves/2022/0xxx/CVE-2022-0984.json",
+    "already_in_initial_review": false,
+    "note": "String similarity is not a relevance judgment; source is an actual pinned record."
+  },
+  {
+    "need_id": "cve-34",
+    "target": "CVE-2024-1709",
+    "other": "CVE-2024-0179",
+    "edit_distance": 2,
+    "source_url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/f36061cc9d42937cd6a7a7321a89da7ef625a190/cves/2024/0xxx/CVE-2024-0179.json",
+    "already_in_initial_review": false,
+    "note": "String similarity is not a relevance judgment; source is an actual pinned record."
+  }
+]

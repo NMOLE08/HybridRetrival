@@ -1,5 +1,7 @@
 # Independent annotation instructions
 
+**Stage 14B:** Use the versioned [v2 workbook and instructions](PHASE2_REVIEW_V2_INSTRUCTIONS.md) for new review. The original v1 CSVs described below remain archived for provenance and should not be completed in place. All v2 judgments remain blank; the AI pre-review is separate and is not independent human annotation.
+
 Use an independent human reviewer who did not author the questions or proposed candidates. The current package is an initial source-evidence review, not a retrieval pool; no system rankings or method names are present. Save completed copies rather than editing the archived original package.
 
 1. Open [question_review.csv](../data/phase2/review/question_review.csv). Review each draft question for a clear, factually valid information need. Fill `reviewer_id` (a consistent real identity or pseudonym), `independent_of_author`, `reviewed_at_utc`, and `question_valid`; record any needed rewrite and reason. Agent-authored status must remain truthful. In particular, rewrite or replace development questions `esp-01` and `esp-02`, which resemble Phase 1 test queries; do not choose replacements based on retrieval performance.

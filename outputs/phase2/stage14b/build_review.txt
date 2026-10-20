@@ -1,0 +1,18 @@
+{
+  "version": "stage14b-v2",
+  "v1_questions_audited": 70,
+  "v1_pairs_audited": 241,
+  "v2_questions": 70,
+  "v2_pairs": 273,
+  "added_pairs": 32,
+  "v1_raw_hash_mismatches": 0,
+  "v1_passage_mismatches": 0,
+  "v1_url_mismatches": 0,
+  "v1_source_extraction_mismatches": 0,
+  "v1_provenance_mismatches": 0,
+  "in_corpus_crossrefs": 2,
+  "same_year_cve_edit_distance_at_most_2": 10,
+  "human_reviewed_questions": 0,
+  "human_reviewed_pairs": 0,
+  "note": "Signals are not relevance judgments; coverage is not exhaustive pooling; human review required."
+}

@@ -1,0 +1,64 @@
+[
+  {
+    "need_id": "cve-07",
+    "old_question": "Which Exchange control is affected by CVE-2020-0688?",
+    "old_macro": "",
+    "new_question": "What Microsoft Exchange vulnerability is described by CVE-2020-0688?",
+    "new_macro": "",
+    "reason": "pinned target description reports memory corruption but does not name the requested control; source-conditioned proposal needs human approval"
+  },
+  {
+    "need_id": "esp-01",
+    "old_question": "How many processor cores are specified for ESP32-C2?",
+    "old_macro": "SOC_CPU_CORES_NUM",
+    "new_question": "Do the ESP32-C2 capability definitions indicate SHA-256 support?",
+    "new_macro": "SOC_SHA_SUPPORT_SHA256",
+    "reason": "old-test topic similarity; replacement proposed after inspecting pinned source; needs human approval"
+  },
+  {
+    "need_id": "esp-02",
+    "old_question": "How many GPIO pins are defined for ESP32-C5?",
+    "old_macro": "SOC_GPIO_PIN_COUNT",
+    "new_question": "Do the ESP32-C5 capability definitions indicate AES-256 support?",
+    "new_macro": "SOC_AES_SUPPORT_AES_256",
+    "reason": "old-test topic similarity; replacement proposed after inspecting pinned source; needs human approval"
+  },
+  {
+    "need_id": "esp-03",
+    "old_question": "What UART controller count is specified for ESP32-S2?",
+    "old_macro": "SOC_UART_NUM",
+    "new_question": "Do the ESP32-S2 capability definitions indicate HMAC support?",
+    "new_macro": "SOC_HMAC_SUPPORTED",
+    "reason": "old-test topic similarity; replacement proposed after inspecting pinned source; needs human approval"
+  },
+  {
+    "need_id": "natural-01",
+    "old_question": "Find a hardware capability definition giving a processor core count.",
+    "old_macro": "SOC_CPU_CORES_NUM",
+    "new_question": "Find a chip capability definition indicating SHA-256 hardware hashing support.",
+    "new_macro": "SOC_SHA_SUPPORT_SHA256",
+    "reason": "old-test topic similarity; replacement proposed after inspecting pinned source; needs human approval",
+    "old_topic_id": "SOC_CPU_CORES_NUM",
+    "new_topic_id": "SOC_SHA_SUPPORT_SHA256"
+  },
+  {
+    "need_id": "natural-02",
+    "old_question": "Locate a chip capability definition specifying the number of general-purpose I/O pins.",
+    "old_macro": "SOC_GPIO_PIN_COUNT",
+    "new_question": "Find a chip capability definition indicating AES-256 cryptographic support.",
+    "new_macro": "SOC_AES_SUPPORT_AES_256",
+    "reason": "old-test topic similarity; replacement proposed after inspecting pinned source; needs human approval",
+    "old_topic_id": "SOC_GPIO_PIN_COUNT",
+    "new_topic_id": "SOC_AES_SUPPORT_AES_256"
+  },
+  {
+    "need_id": "natural-03",
+    "old_question": "Which capability declaration gives the number of universal asynchronous receiver transmitters?",
+    "old_macro": "SOC_UART_NUM",
+    "new_question": "Find a chip capability definition indicating secure boot support.",
+    "new_macro": "SOC_SECURE_BOOT_SUPPORTED",
+    "reason": "old-test topic similarity; replacement proposed after inspecting pinned source; needs human approval",
+    "old_topic_id": "SOC_UART_NUM",
+    "new_topic_id": "SOC_SECURE_BOOT_SUPPORTED"
+  }
+]

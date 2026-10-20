@@ -1,0 +1,19 @@
+{
+  "purpose": "Stage 14B evidence and blank review package; no retrieval experiments",
+  "created_utc": "2026-10-19T09:43:06.774026+00:00",
+  "python": "3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "files": {
+    "data/phase2/review/question_review.csv": "28a8d48bb0cd19e39dd111451ab25391dd2d7cf66ccc9ab5411025a2633edda4",
+    "data/phase2/review/candidate_pairs.csv": "c98fd34aec96741e47a6e374fe2f7454121bf184631d443c7d7a45c1796a1be3",
+    "data/phase2/corpus.jsonl": "11705c15651669278699f3a0e9e95ba7c98dab2c73f430cd21f8a87cbec50852",
+    "data/phase2/provenance.csv": "5a96425ce41715924464e149551d1cc2fd7d7f1ce262e37a3b025f17146c08f3",
+    "data/phase2/review_v2/question_review.csv": "84c254f1951f33aa8cb1ac34e6dc3d225f297ba877fbe28aff7ded55806ca173",
+    "data/phase2/review_v2/candidate_pairs.csv": "24cd6c934ddcc2cc979d1109b2bcce36f7904f4b278fc5b58830639b19458621",
+    "data/phase2/review_v2/needs.jsonl": "a12b748cdcef1f1ad4bbc57a80b7ad84b1ac7f04566bff489431c69cd55e53cd",
+    "data/phase2/review_v2/change_log.json": "8f95c9bf66b93dd17516c6a5626260589a15f5f75653ae5c436946adf1018569",
+    "data/phase2/review_v2/phase2_human_review.xlsx": "9bd008742ef487bb6d8bdbc90c19286de10bb12ad935e9763ea601fda8fa6673",
+    "outputs/phase2/stage14b/v1_question_audit.csv": "d40a9c1f7986ff2b0fb4909ab4bdb79d1215afd9594fc0db065c4a9a067948f8",
+    "outputs/phase2/stage14b/v1_pair_audit.csv": "3f48dd077d358cd934d801b176135e2b74eaddf8c008b546d74e28a1b18cb940"
+  }
+}

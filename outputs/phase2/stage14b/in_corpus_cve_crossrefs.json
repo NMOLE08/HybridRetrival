@@ -1,0 +1,14 @@
+[
+  {
+    "doc_id": "cve-2021-41773",
+    "mentioned_cve": "CVE-2021-42013",
+    "source_url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/f36061cc9d42937cd6a7a7321a89da7ef625a190/cves/2021/41xxx/CVE-2021-41773.json",
+    "statement": "mention only; human must assess relevance"
+  },
+  {
+    "doc_id": "cve-2021-42013",
+    "mentioned_cve": "CVE-2021-41773",
+    "source_url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/f36061cc9d42937cd6a7a7321a89da7ef625a190/cves/2021/42xxx/CVE-2021-42013.json",
+    "statement": "mention only; human must assess relevance"
+  }
+]

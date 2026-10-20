@@ -1,5 +1,9 @@
 # Phase 2 review status
 
+## Stage 14B update
+
+The v1 files below are preserved. A separate [v2 human-review workbook](../data/phase2/review_v2/phase2_human_review.xlsx) and [instructions](PHASE2_REVIEW_V2_INSTRUCTIONS.md) now contain 70 questions and 273 unjudged pairs. A separate [AI-assisted pre-review](PHASE2_AI_PREREVIEW.md) audits all 70 original questions and 241 original pairs, records source evidence and its limitations, and identifies seven source-conditioned proposed question rewrites. V2 adds 32 source-based candidates, keeping all original pair IDs. Two directed in-corpus cross-reference cases remain below the target of five. There are no independently reviewed questions or pairs. Stage 14 remains provisional and the human-review gate is blocked; no Stage 15 pooling, tuning or final test evaluation is authorized by this update.
+
 **Status: BLOCKED on independent human review; Stage 14 remains provisional.** No independent human query review, relevance judgments, second-rater agreement or adjudication has occurred. No Phase 2 qrels, development tuning, selected weights, test rankings or effectiveness results exist.
 
 The initial [question review](../data/phase2/review/question_review.csv) lists 70 agent-authored draft needs. The blinded [candidate review](../data/phase2/review/candidate_pairs.csv) lists 241 source-based pairs, all unjudged. It contains no method labels or retrieval rankings. A real reviewer must follow [the annotation instructions](PHASE2_ANNOTATION_GUIDELINES.md), identify themselves or use a stable pseudonym, state independence and supply UTC timestamps, evidence and judgments. Zero pairs are human reviewed; a second reviewer and disagreement rate are not available.

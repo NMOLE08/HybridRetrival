@@ -1,0 +1,6 @@
+Stage 14B development attempts (no retrieval, tuning or evaluation)
+- Initial review builder failed with AttributeError when natural queries had null targets. Fixed null handling; successful build recorded in build_review.txt.
+- Initial console inspection failed with Windows cp1252 UnicodeDecodeError. Explicit UTF-8 file reading fixed it. A later CVE target print hit cp1252 UnicodeEncodeError; UTF-8 stdout fixed it. Source files were not modified.
+- The first XLSX round-trip flagged five passages because XML normalized CRLF to LF. Validator now canonicalizes line endings only; final validation has zero integrity errors and remains BLOCKED due to absent human review.
+- review_validation_blank.json records an intermediate 248-pair blank package; final workbook_validation.txt and review_validation_workbook_blank.json refer to 273 pairs.
+- No independent human judgments were generated during development or testing. Validator tests use synthetic fixtures only.

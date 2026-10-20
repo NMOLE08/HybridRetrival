@@ -1,0 +1,14 @@
+{
+  "status": "BLOCKED",
+  "questions": 70,
+  "pairs": 273,
+  "reviewed_questions": 0,
+  "reviewed_pairs": 0,
+  "questions_without_reviewed_positive": 70,
+  "limitations": [
+    "Self-attested identity and independence cannot be verified by this script.",
+    "Passing does not authorize tuning; a human must resolve validity, overlap, source coverage and the protocol gate.",
+    "This initial source pool is not a complete retrieval pool."
+  ]
+}
+errors: 0 pending: 413 overlap flags: 0
