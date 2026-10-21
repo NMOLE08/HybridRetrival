@@ -65,3 +65,11 @@ Built a 150-passage draft corpus from 90 pinned CVE records and 60 excerpts of 1
 **Checks:** 26 automated tests passed. All 54 protected Phase 1 artifacts matched the reference commit. The blank workbook correctly validates as blocked: 0/70 question decisions, 0/273 pair decisions, and no independently reviewed positives. No Phase 2 rankings, tuning or effectiveness measurements were produced.
 
 **Pending:** A genuinely independent human must complete `data/phase2/review_v2/phase2_human_review.xlsx` using `docs/PHASE2_REVIEW_V2_INSTRUCTIONS.md`, including evidence, uncertainty, identity, independence and UTC timestamps. The reviewer must resolve the three hardware needs, proposed rewrites, split independence, coverage and CVE cross-reference judgments. The initial pool is not complete; subsequent blinded pooling remains subject to the research protocol. Stop before Stage 15 until the completed review is returned.
+
+## 2026-10-21 — Submitted review intake
+
+**Status: blocked.** The named completed-workbook file was not present. The modified original review workbook contains numeric attempts at all question and pair decisions, but none of the required independent-review provenance: reviewer identity, independence attestation, UTC time, source evidence, confidence, or uncertainty. It also has 33 needs without a labelled positive. The submitted labels remain unmodified and are not treated as qrels.
+
+**Saved:** `outputs/phase2/stage15/reviewed_workbook_validation.json` and `submitted_review_readonly_audit.json` record the validator result and label distribution. No retrieval, pooling, tuning, final evaluation, figure generation, or paper-writing experiment has been run.
+
+**Required next:** An independent reviewer must complete the existing workbook (or provide the intended completed copy), use `yes`/`no`/`unknown` for question validity, and fill all required reviewer/evidence/uncertainty fields. Stage 15 remains blocked until that evidence and coverage are reviewed and validated.

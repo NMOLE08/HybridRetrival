@@ -1,0 +1,94 @@
+{
+  "question_valid_values": {
+    "1": 54,
+    "0": 16
+  },
+  "pair_relevance_values": {
+    "0": 171,
+    "1": 102
+  },
+  "question_metadata_nonempty": {
+    "reviewer_id": 0,
+    "independent_of_author": 0,
+    "reviewed_at_utc": 0,
+    "rewrite_or_notes": 0
+  },
+  "pair_metadata_nonempty": {
+    "reviewer_id": 0,
+    "independent_of_author": 0,
+    "reviewed_at_utc": 0,
+    "confidence": 0,
+    "evidence_or_reason": 0,
+    "ambiguity_or_adjudication": 0
+  },
+  "needs_without_positive": [
+    "esp-03",
+    "esp-01",
+    "natural-07",
+    "natural-10",
+    "esp-08",
+    "natural-16",
+    "esp-07",
+    "natural-06",
+    "esp-04",
+    "esp-10",
+    "esp-06",
+    "natural-05",
+    "esp-13",
+    "natural-02",
+    "esp-11",
+    "natural-14",
+    "natural-09",
+    "esp-05",
+    "esp-14",
+    "natural-17",
+    "natural-18",
+    "natural-08",
+    "esp-02",
+    "esp-09",
+    "natural-12",
+    "natural-03",
+    "esp-12",
+    "natural-15",
+    "esp-15",
+    "natural-04",
+    "natural-11",
+    "natural-01",
+    "esp-16"
+  ],
+  "needs_with_unknown": [],
+  "cross_reference_rows": [
+    {
+      "review_pair_id": "pair-0170",
+      "need_id": "cve-21",
+      "doc_id": "cve-2021-41773",
+      "human_relevance": "1",
+      "evidence_or_reason": "",
+      "ambiguity_or_adjudication": ""
+    },
+    {
+      "review_pair_id": "pair-0182",
+      "need_id": "cve-35",
+      "doc_id": "cve-2021-42013",
+      "human_relevance": "1",
+      "evidence_or_reason": "",
+      "ambiguity_or_adjudication": ""
+    },
+    {
+      "review_pair_id": "pair-0192",
+      "need_id": "cve-35",
+      "doc_id": "cve-2021-41773",
+      "human_relevance": "1",
+      "evidence_or_reason": "",
+      "ambiguity_or_adjudication": ""
+    },
+    {
+      "review_pair_id": "pair-0220",
+      "need_id": "cve-21",
+      "doc_id": "cve-2021-42013",
+      "human_relevance": "1",
+      "evidence_or_reason": "",
+      "ambiguity_or_adjudication": ""
+    }
+  ]
+}

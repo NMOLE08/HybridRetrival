@@ -195,3 +195,9 @@
 - Source rights: Existing CVE terms and Espressif source-header MIT option and attribution remain in force; external documentation is linked for checking, not incorporated or assumed reusable. No retrieval experiments, parameter selection, or test effectiveness results were produced.
 - Next action: obtain a genuinely independent completed review, preserve returned judgments and reviewer provenance, resolve question validity, semantic overlap and all source/positive gaps, then apply the documented stage gate. Stop before Stage 15 and all tuning/evaluation until this occurs.
 - Commit: see the Stage 14B Git checkpoint.
+
+### Stage 15 — Submitted workbook intake
+- Status: BLOCKED. The requested `phase2_human_review_completed.xlsx` file is absent. The modified original workbook was read without alteration as the likely submission.
+- Verification: validator reports 70 attempted question decisions and 273 attempted pair labels, but 1,918 schema/provenance errors and 103 pending coverage items. All reviewer identities, independence attestations, UTC timestamps, evidence/reasons, confidence, and uncertainty/adjudication fields are blank. Thirty-three needs have no reviewed positive. The labels cannot be treated as independently reviewed qrels.
+- Saved evidence: `outputs/phase2/stage15/reviewed_workbook_validation.json` and `submitted_review_readonly_audit.json` preserve the exact intake result. No Stage 15 pooling or later experiment has run.
+- Next action: return a completed independent review with the required fields and explicit question validity values; then revalidate, inspect evidence, and resolve versioned dataset changes before any development run.
