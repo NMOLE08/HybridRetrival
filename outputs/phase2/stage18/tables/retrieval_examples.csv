@@ -1,0 +1,3 @@
+case,query_id,query,rrf_first_positive_rank,identifier_aware_first_positive_rank,minilm_first_positive_rank
+identifier-aware success over RRF,cve-18,What product and weakness are associated with CVE-2023-46747?,4,1,21
+semantic baseline failure (not identifier-aware failure),cve-18,What product and weakness are associated with CVE-2023-46747?,4,1,21

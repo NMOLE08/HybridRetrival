@@ -1,0 +1,28 @@
+{
+  "source_metrics": "outputs/phase2/stage17/metrics.json",
+  "source_manifest": "outputs/phase2/stage17/manifest.json",
+  "source_eligibility_manifest": "outputs/phase2/stage15_exploratory/dataset_manifest.json",
+  "figures": [
+    "computational_cost.png",
+    "computational_cost.svg",
+    "eligibility_flow.png",
+    "eligibility_flow.svg",
+    "family_breakdown.png",
+    "family_breakdown.svg",
+    "metric_comparison.png",
+    "metric_comparison.svg",
+    "paired_mrr_differences.png",
+    "paired_mrr_differences.svg",
+    "retrieval_architecture.png",
+    "retrieval_architecture.svg"
+  ],
+  "tables": [
+    "ablation.csv",
+    "baseline_comparison.csv",
+    "eligibility_flow.csv",
+    "family_breakdown.csv",
+    "paired_intervals.csv",
+    "retrieval_examples.csv"
+  ],
+  "note": "All figures/tables derive from saved Phase 2 outputs; Phase 1 is not included."
+}

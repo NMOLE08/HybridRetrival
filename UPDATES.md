@@ -127,3 +127,11 @@ the held-out 18-query exploratory test exactly once with the saved configuration
 **Checks:** Saved 13,500 ranking rows, per-query outcomes, explanations, three warm timing samples per query, bootstrap intervals, gains/losses/ties, and 18 deterministic repeat checks. Independently reconstructed the metrics from saved rankings; 26 tests passed.
 
 **Limitations:** This is not a statistically significant general claim. It is a small, CVE-only, author-annotated and incompletely judged subset. Seventy original author-positive labels were `unknown` in the derived qrels. The held-out split constrains tuning but does not supply independent validation.
+
+## 2026-10-21 — Stage 18 figures and analysis
+
+**Progress:** Generated reproducible Phase 2-only architecture, eligibility-flow, metric-comparison, paired-difference, family-breakdown, and computational-cost figures in PNG and SVG. Saved baseline, ablation, eligibility, family, paired-interval, timing, and retrieval-example tables. The figures show the actual 18-query CVE-only subset and do not mix in Phase 1 results.
+
+**Findings:** The concrete case `cve-18` illustrates an RRF first-positive rank of 4 and an identifier-aware rank of 1; MiniLM's first known positive was rank 21. No identifier-aware failure was observed in the 18 evaluated queries, so the examples describe a semantic baseline failure rather than inventing an adverse method case.
+
+**Next:** Build the IEEE-style exploratory paper from these saved files, with explicit protocol, label, coverage, and generalization limitations.

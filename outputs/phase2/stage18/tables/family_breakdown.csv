@@ -1,0 +1,2 @@
+identifier_family,queries,mrr_at_10,note
+cve,18,1.0,Only eligible family; ESP32 and natural queries excluded by evidence policy
