@@ -73,3 +73,11 @@ Built a 150-passage draft corpus from 90 pinned CVE records and 60 excerpts of 1
 **Saved:** `outputs/phase2/stage15/reviewed_workbook_validation.json` and `submitted_review_readonly_audit.json` record the validator result and label distribution. No retrieval, pooling, tuning, final evaluation, figure generation, or paper-writing experiment has been run.
 
 **Required next:** An independent reviewer must complete the existing workbook (or provide the intended completed copy), use `yes`/`no`/`unknown` for question validity, and fill all required reviewer/evidence/uncertainty fields. Stage 15 remains blocked until that evidence and coverage are reviewed and validated.
+
+## 2026-10-21 — Review follow-up materials
+
+**Progress:** Preserved the submitted workbook and created a separate normalized v3 copy: 54 question values are `yes`, 16 are `no`, and all 273 submitted pair labels remain unchanged. The validator still blocks the review because the reviewer provenance and source evidence are blank and 33 questions have no reviewed positive.
+
+**How:** Identified all 16 invalid questions (`natural-03`–`natural-18`) and all 33 no-positive questions. Checked the retained corpus only and prepared 152 additional candidates with source/provenance links. They are blank and unjudged; no relevance labels, identities, timestamps, declarations, confidence, or evidence notes were fabricated.
+
+**Pending:** A real independent reviewer must use the v3 follow-up workbook to correct or exclude invalid questions, add metadata/evidence for the existing labels, and judge the additional candidates. ESP-08, ESP-11, and ESP-13 need full source-context review. No Stage 15 pooling, development tuning, or final-test evaluation is allowed.

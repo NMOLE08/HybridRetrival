@@ -72,3 +72,8 @@
 ## 2026-10-21 — Stage 15 intake rejection
 - Do not convert the submitted numeric question values (`1`/`0`) into schema validity values or infer reviewer provenance. Treat them as an incomplete, unverified submission because every required reviewer metadata and evidence field is blank.
 - Preserve all submitted pair labels exactly but do not use them as qrels: 33 needs lack a positive, and no reviewer evidence establishes the labelled positives, negatives, or cross-references. Keep the review gate blocked and do not begin pooling, dev selection, or test evaluation.
+
+## 2026-10-21 — Stage 15 follow-up normalization and coverage repair
+- A derived v3 copy maps the submitted question decisions to `yes`/`no` without changing their meaning. The original workbook is not modified, and all 273 submitted pair labels are preserved exactly.
+- Macro-name matching against the retained pinned corpus can prepare review leads but cannot create a relevance label. The 152 added candidates remain blank/unjudged; source-context cases and unsupported needs require explicit human correction, exclusion, or new versioned evidence.
+- Reviewer pseudonym, independence declaration, actual UTC time, confidence, source-specific reason, and uncertainty must be supplied by a genuine independent reviewer. Blank metadata is not repaired by automation. The Stage 15/16/17 gates remain blocked.
