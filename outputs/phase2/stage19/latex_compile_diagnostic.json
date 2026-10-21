@@ -1,0 +1,8 @@
+{
+  "attempted": true,
+  "status": "environment_blocked_before_source_processing",
+  "tool": "Codex built-in LaTeX compiler",
+  "diagnostic": "Windows sandbox denied Tectonic process creation (CreateProcessAsUserW error 5).",
+  "source": "paper/phase2_ieee_exploratory/main.tex",
+  "claim": "No PDF compilation success is claimed."
+}

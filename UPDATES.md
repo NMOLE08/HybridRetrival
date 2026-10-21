@@ -135,3 +135,11 @@ the held-out 18-query exploratory test exactly once with the saved configuration
 **Findings:** The concrete case `cve-18` illustrates an RRF first-positive rank of 4 and an identifier-aware rank of 1; MiniLM's first known positive was rank 21. No identifier-aware failure was observed in the 18 evaluated queries, so the examples describe a semantic baseline failure rather than inventing an adverse method case.
 
 **Next:** Build the IEEE-style exploratory paper from these saved files, with explicit protocol, label, coverage, and generalization limitations.
+
+## 2026-10-21 — Stage 19 IEEE-style exploratory paper
+
+**Progress:** Added a complete IEEEtran conference-style TeX paper covering the research question, related work, mathematical reranking method, protocol amendment, provenance and eligibility, development-only freeze, held-out results, ablation, timing, threats to validity, conclusion, and verifiable citations. It uses only saved Phase 2 figures and measured results.
+
+**Verification:** The built-in LaTeX compiler was invoked, but Windows sandbox process creation failed before it could process the source. No PDF is claimed. The paper source, compile instructions, and exact diagnostic are saved under `paper/phase2_ieee_exploratory/` and `outputs/phase2/stage19/`.
+
+**Status:** Stages 15--19 are complete under the explicitly amended exploratory protocol. The study remains author-annotated and exploratory; it is not independently reviewed or confirmatory.
