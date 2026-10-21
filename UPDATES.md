@@ -102,3 +102,20 @@ unjudged and are not ground truth.
 **Next:** Verify the frozen subset, then run the predeclared development-only
 weight grid. All Phase 2 outputs will be reported as exploratory and will state
 the author-label and coverage limitations.
+
+## 2026-10-21 — Stage 16 development-only selection
+
+**Progress:** Ran all 12 preregistered identifier-aware configurations on the
+12 eligible development queries only. The baseline RRF development MRR@10 was
+0.9167. Multiple configurations reached 1.0 MRR@10, Recall@5, and nDCG@10;
+the predeclared tie-break selected match weight 0 and conflict weight 0.003.
+
+**Checks:** The frozen dataset validator passed and 26 automated tests passed.
+The test query and qrel hashes were checked but no held-out ranking or metric
+was generated. A first MiniLM load tried inaccessible remote metadata; the
+recorded run was restarted with the already cached pinned revision in offline
+mode. That transient attempt is documented and not used as an experimental
+result.
+
+**Next:** Commit the selected configuration and frozen hashes, then evaluate
+the held-out 18-query exploratory test exactly once with the saved configuration.

@@ -82,3 +82,7 @@
 - The user explicitly authorized replacing the unavailable independent-review gate with an author-annotated exploratory protocol. Preserve the old protocol and state the amendment date, timing, and scope in every relevant report.
 - Freeze only queries with author validity `yes` and an author-positive pair whose pinned raw source contains the target. This produced 30 CVE-only queries (12 dev, 18 test) and 32 positives before any Phase 2 ranking. The resulting family imbalance is a limitation, not a result to repair using retrieval output.
 - Preserve all original labels. In derived qrels, author-positive pairs without target evidence are `unknown`; this avoids treating suspicious positives as negatives. Retain author `0` labels as author-produced negatives and disclose their incomplete coverage. The 152 unjudged follow-up candidates are excluded from qrels.
+
+## 2026-10-21 — Stage 16 development-only selection
+- The selected Phase 2 exploratory configuration is `(lambda_match=0, lambda_conflict=0.003)`. It is selected solely by the documented development criteria after several configurations tied on MRR, Recall, and nDCG.
+- The MiniLM loader is explicitly offline/local-cache-only for reproducibility and to prevent an evaluation from fetching mutable Hub metadata. An initial metadata retry was superseded and is logged; only the later recorded run is used. Test query and qrel hashes were checked, but no test ranking or metric was read.

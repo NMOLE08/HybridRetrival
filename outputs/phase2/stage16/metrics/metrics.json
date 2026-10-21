@@ -1,0 +1,237 @@
+{
+  "identifier_aware": {
+    "all": {
+      "n_queries": 12,
+      "recall_at_5": 1.0,
+      "mrr_at_10": 1.0,
+      "ndcg_at_10": 1.0,
+      "wrong_id_at_1": {
+        "eligible": 12,
+        "wrong": 0,
+        "unknown": 0,
+        "adjudicated": 12,
+        "lower_bound": 0.0,
+        "upper_bound": 0.0,
+        "rate_among_known": 0.0
+      }
+    },
+    "family:cve": {
+      "n_queries": 12,
+      "recall_at_5": 1.0,
+      "mrr_at_10": 1.0,
+      "ndcg_at_10": 1.0,
+      "wrong_id_at_1": {
+        "eligible": 12,
+        "wrong": 0,
+        "unknown": 0,
+        "adjudicated": 12,
+        "lower_bound": 0.0,
+        "upper_bound": 0.0,
+        "rate_among_known": 0.0
+      }
+    },
+    "type:identifier": {
+      "n_queries": 12,
+      "recall_at_5": 1.0,
+      "mrr_at_10": 1.0,
+      "ndcg_at_10": 1.0,
+      "wrong_id_at_1": {
+        "eligible": 12,
+        "wrong": 0,
+        "unknown": 0,
+        "adjudicated": 12,
+        "lower_bound": 0.0,
+        "upper_bound": 0.0,
+        "rate_among_known": 0.0
+      }
+    }
+  },
+  "match_only": {
+    "all": {
+      "n_queries": 12,
+      "recall_at_5": 1.0,
+      "mrr_at_10": 0.9166666666666666,
+      "ndcg_at_10": 0.9384882922619097,
+      "wrong_id_at_1": {
+        "eligible": 12,
+        "wrong": 0,
+        "unknown": 2,
+        "adjudicated": 10,
+        "lower_bound": 0.0,
+        "upper_bound": 0.16666666666666666,
+        "rate_among_known": 0.0
+      }
+    },
+    "family:cve": {
+      "n_queries": 12,
+      "recall_at_5": 1.0,
+      "mrr_at_10": 0.9166666666666666,
+      "ndcg_at_10": 0.9384882922619097,
+      "wrong_id_at_1": {
+        "eligible": 12,
+        "wrong": 0,
+        "unknown": 2,
+        "adjudicated": 10,
+        "lower_bound": 0.0,
+        "upper_bound": 0.16666666666666666,
+        "rate_among_known": 0.0
+      }
+    },
+    "type:identifier": {
+      "n_queries": 12,
+      "recall_at_5": 1.0,
+      "mrr_at_10": 0.9166666666666666,
+      "ndcg_at_10": 0.9384882922619097,
+      "wrong_id_at_1": {
+        "eligible": 12,
+        "wrong": 0,
+        "unknown": 2,
+        "adjudicated": 10,
+        "lower_bound": 0.0,
+        "upper_bound": 0.16666666666666666,
+        "rate_among_known": 0.0
+      }
+    }
+  },
+  "minilm": {
+    "all": {
+      "n_queries": 12,
+      "recall_at_5": 0.9166666666666666,
+      "mrr_at_10": 0.7384259259259259,
+      "ndcg_at_10": 0.8020413178709789,
+      "wrong_id_at_1": {
+        "eligible": 12,
+        "wrong": 0,
+        "unknown": 5,
+        "adjudicated": 7,
+        "lower_bound": 0.0,
+        "upper_bound": 0.4166666666666667,
+        "rate_among_known": 0.0
+      }
+    },
+    "family:cve": {
+      "n_queries": 12,
+      "recall_at_5": 0.9166666666666666,
+      "mrr_at_10": 0.7384259259259259,
+      "ndcg_at_10": 0.8020413178709789,
+      "wrong_id_at_1": {
+        "eligible": 12,
+        "wrong": 0,
+        "unknown": 5,
+        "adjudicated": 7,
+        "lower_bound": 0.0,
+        "upper_bound": 0.4166666666666667,
+        "rate_among_known": 0.0
+      }
+    },
+    "type:identifier": {
+      "n_queries": 12,
+      "recall_at_5": 0.9166666666666666,
+      "mrr_at_10": 0.7384259259259259,
+      "ndcg_at_10": 0.8020413178709789,
+      "wrong_id_at_1": {
+        "eligible": 12,
+        "wrong": 0,
+        "unknown": 5,
+        "adjudicated": 7,
+        "lower_bound": 0.0,
+        "upper_bound": 0.4166666666666667,
+        "rate_among_known": 0.0
+      }
+    }
+  },
+  "rrf": {
+    "all": {
+      "n_queries": 12,
+      "recall_at_5": 1.0,
+      "mrr_at_10": 0.9166666666666666,
+      "ndcg_at_10": 0.9384882922619097,
+      "wrong_id_at_1": {
+        "eligible": 12,
+        "wrong": 0,
+        "unknown": 2,
+        "adjudicated": 10,
+        "lower_bound": 0.0,
+        "upper_bound": 0.16666666666666666,
+        "rate_among_known": 0.0
+      }
+    },
+    "family:cve": {
+      "n_queries": 12,
+      "recall_at_5": 1.0,
+      "mrr_at_10": 0.9166666666666666,
+      "ndcg_at_10": 0.9384882922619097,
+      "wrong_id_at_1": {
+        "eligible": 12,
+        "wrong": 0,
+        "unknown": 2,
+        "adjudicated": 10,
+        "lower_bound": 0.0,
+        "upper_bound": 0.16666666666666666,
+        "rate_among_known": 0.0
+      }
+    },
+    "type:identifier": {
+      "n_queries": 12,
+      "recall_at_5": 1.0,
+      "mrr_at_10": 0.9166666666666666,
+      "ndcg_at_10": 0.9384882922619097,
+      "wrong_id_at_1": {
+        "eligible": 12,
+        "wrong": 0,
+        "unknown": 2,
+        "adjudicated": 10,
+        "lower_bound": 0.0,
+        "upper_bound": 0.16666666666666666,
+        "rate_among_known": 0.0
+      }
+    }
+  },
+  "tfidf": {
+    "all": {
+      "n_queries": 12,
+      "recall_at_5": 1.0,
+      "mrr_at_10": 0.9166666666666666,
+      "ndcg_at_10": 0.9384882922619097,
+      "wrong_id_at_1": {
+        "eligible": 12,
+        "wrong": 0,
+        "unknown": 2,
+        "adjudicated": 10,
+        "lower_bound": 0.0,
+        "upper_bound": 0.16666666666666666,
+        "rate_among_known": 0.0
+      }
+    },
+    "family:cve": {
+      "n_queries": 12,
+      "recall_at_5": 1.0,
+      "mrr_at_10": 0.9166666666666666,
+      "ndcg_at_10": 0.9384882922619097,
+      "wrong_id_at_1": {
+        "eligible": 12,
+        "wrong": 0,
+        "unknown": 2,
+        "adjudicated": 10,
+        "lower_bound": 0.0,
+        "upper_bound": 0.16666666666666666,
+        "rate_among_known": 0.0
+      }
+    },
+    "type:identifier": {
+      "n_queries": 12,
+      "recall_at_5": 1.0,
+      "mrr_at_10": 0.9166666666666666,
+      "ndcg_at_10": 0.9384882922619097,
+      "wrong_id_at_1": {
+        "eligible": 12,
+        "wrong": 0,
+        "unknown": 2,
+        "adjudicated": 10,
+        "lower_bound": 0.0,
+        "upper_bound": 0.16666666666666666,
+        "rate_among_known": 0.0
+      }
+    }
+  }
+}

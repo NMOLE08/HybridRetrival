@@ -1,0 +1,8 @@
+{
+  "event": "initial Stage 16 model-load attempt",
+  "status": "superseded preflight anomaly",
+  "observation": "The model loader attempted a sandbox-blocked Hugging Face metadata request despite a local pinned cache. The tool session did not return a complete result log; four uninspected transient files were present when the run directory was reset.",
+  "remediation": "The recorded Stage 16 run was restarted from an empty output directory with local_files_only=true, using the already cached pinned MiniLM revision.",
+  "data_or_test_metrics_read": false,
+  "limitation": "The transient first-attempt files cannot be reconstructed. The retained local-only run is the authoritative, reproducible development record."
+}

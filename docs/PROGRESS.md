@@ -207,3 +207,15 @@
 - Work completed: identified the 16 invalid questions (`natural-03` through `natural-18`) and 33 needs without a submitted positive. Existing-corpus macro lookup prepared 152 additional **unjudged** candidates; it does not assign labels. Created a simplified review workbook with separate question correction, retained-pair evidence, new-candidate, and coverage-action sheets.
 - Verification: `scripts/validate_phase2_human_review.py` reports status BLOCKED for both the submitted and normalized workbook. The normalized pair-ID/label sequence exactly matches the submitted sequence. No retrieval, pooling, parameter choice, or held-out evaluation was run.
 - Remaining: reviewer metadata and source-specific evidence are blank for submitted labels; 33 needs lack a reviewed positive. ESP-08, ESP-11, and ESP-13 require full-context assessment. A genuine independent reviewer must complete the v3 follow-up materials before any Phase 2 experiment.
+
+### Stage 15 exploratory amendment — author-annotated evidence subset
+- Status: PASS for the explicitly exploratory protocol only. The original independent-review protocol and materials remain preserved. The amended protocol was written before any Phase 2 retrieval ranking.
+- Work completed: audited 273 author labels and frozen `phase2_exploratory_v1`. Thirty CVE identifier queries (12 dev, 18 test) have 32 author-positive pairs supported by the full pinned raw source. Seventy unsupported author-positive labels are represented as `unknown` only in derived qrels; original labels remain unchanged. Forty queries are excluded solely by validity/answerability evidence.
+- Verification: frozen-subset validator PASS: 30 queries, 93 derived qrels, 32 positives, no eligible query without a positive; existing test suite 26 passed.
+- Limitation: labels are author-produced, negative coverage is sparse, 152 extra candidates remain unjudged, and the frozen subset has no ESP32 or natural-language query. This is not independent validation.
+
+### Stage 16 — Development-only configuration selection
+- Status: PASS. Ran the full 4 × 3 predeclared grid on 12 eligible development queries. Baseline RRF MRR@10 was 0.9167; multiple variants tied at MRR@10/Recall@5/nDCG@10 = 1.0. The predeclared tie-break selected match `0` and conflict `0.003`.
+- Verification: saved all baseline and grid rankings, metrics, environment, selection configuration, freeze hashes, and test-file hash checks. The held-out query and qrel files were not ranked or scored. Dataset validation and 26 tests passed.
+- Note: an initial MiniLM load attempted sandbox-blocked remote metadata. It was superseded by the saved local-cache-only run; the transient attempt and limitation are recorded.
+- Next exact stage: run the selected frozen configuration against the 18 held-out queries and report only exploratory results.

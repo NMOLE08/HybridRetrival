@@ -1,0 +1,14 @@
+annotation_status: author annotated; not independently verified
+dataset_version: phase2_exploratory_v1
+device: cpu
+lambda_conflict: 0.003
+lambda_match: 0.0
+model: sentence-transformers/all-MiniLM-L6-v2
+model_revision: 1110a243fdf4706b3f48f1d95db1a4f5529b4d41
+rrf_k: 60
+seed: 42
+selection_rule: maximize identifier MRR@10; minimize observed upper WrongIdentifier@1;
+  maximize Recall@5; minimize total weight; match; conflict
+selection_split: development only
+unknown_policy: unknown pairs are omitted from relevance and remain unknown for wrong-identifier
+  bounds

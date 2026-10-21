@@ -26,7 +26,9 @@ class DenseRetriever:
         if model is None:
             try:
                 from sentence_transformers import SentenceTransformer
-                model = SentenceTransformer(model_id, revision=revision, device="cpu")
+                # The declared model revision is already cached and verified by the
+                # project.  Never let a benchmark run fetch mutable Hub metadata.
+                model = SentenceTransformer(model_id, revision=revision, device="cpu", local_files_only=True)
             except Exception as exc:
                 raise RuntimeError(f"Could not load pretrained {model_id} at revision {revision}; check network access or populate the Hugging Face cache. Original error: {exc}") from exc
         self.model_load_seconds = time.perf_counter() - start
