@@ -219,3 +219,10 @@
 - Verification: saved all baseline and grid rankings, metrics, environment, selection configuration, freeze hashes, and test-file hash checks. The held-out query and qrel files were not ranked or scored. Dataset validation and 26 tests passed.
 - Note: an initial MiniLM load attempted sandbox-blocked remote metadata. It was superseded by the saved local-cache-only run; the transient attempt and limitation are recorded.
 - Next exact stage: run the selected frozen configuration against the 18 held-out queries and report only exploratory results.
+
+### Stage 17 — Frozen exploratory held-out evaluation
+- Status: PASS as an exploratory evaluation. The Stage 16 frozen config, corpus, test query/qrel hashes, model revision, and seed were verified before ranking. All 18 test queries had deterministic repeated lexical, dense, RRF, and identifier-aware rankings.
+- Results: TF-IDF / MiniLM / RRF / match-only / identifier-aware MRR@10 = 0.8667 / 0.7278 / 0.8074 / 0.8074 / 1.0000; Recall@5 = 0.8889 / 0.8333 / 1.0000 / 1.0000 / 1.0000; nDCG@10 = 0.8844 / 0.7801 / 0.8544 / 0.8544 / 1.0000. Identifier-aware versus RRF MRR difference is 0.1926 with paired bootstrap interval [0.0556, 0.3481], five gains, zero losses, thirteen ties. This is descriptive, not a claim of general statistical significance.
+- Verification: 13,500 full ranking rows, score explanations, 54 warm timing samples, per-query metrics, paired bootstraps, and an independent reconstruction were saved. `pytest` remained 26 passed.
+- Limitations: 18 CVE-only author-annotated queries, sparse explicit negatives, unknown coverage, and non-independent labels. Wrong-ID upper bounds are 3/18 TF-IDF, 7/18 MiniLM, 5/18 RRF/match-only, and 0/18 identifier-aware; these are bounds under incomplete qrels.
+- Next exact stage: generate reproducible research figures, tables, error examples, and manuscript materials, separating Phase 1 from Phase 2.

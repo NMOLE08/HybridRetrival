@@ -119,3 +119,11 @@ result.
 
 **Next:** Commit the selected configuration and frozen hashes, then evaluate
 the held-out 18-query exploratory test exactly once with the saved configuration.
+
+## 2026-10-21 — Stage 17 exploratory held-out evaluation
+
+**Progress:** Evaluated the frozen five-system comparison on 18 held-out CVE queries. Identifier-aware reranking (`match=0`, `conflict=.003`) achieved MRR@10/Recall@5/nDCG@10 of 1.0000/1.0000/1.0000; RRF achieved 0.8074/1.0000/0.8544. The identifier-aware versus RRF MRR difference is 0.1926 with a descriptive bootstrap interval [0.0556, 0.3481], five gains, zero losses, and thirteen ties.
+
+**Checks:** Saved 13,500 ranking rows, per-query outcomes, explanations, three warm timing samples per query, bootstrap intervals, gains/losses/ties, and 18 deterministic repeat checks. Independently reconstructed the metrics from saved rankings; 26 tests passed.
+
+**Limitations:** This is not a statistically significant general claim. It is a small, CVE-only, author-annotated and incompletely judged subset. Seventy original author-positive labels were `unknown` in the derived qrels. The held-out split constrains tuning but does not supply independent validation.
