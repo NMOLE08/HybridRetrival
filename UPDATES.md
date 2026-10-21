@@ -81,3 +81,24 @@ Built a 150-passage draft corpus from 90 pinned CVE records and 60 excerpts of 1
 **How:** Identified all 16 invalid questions (`natural-03`–`natural-18`) and all 33 no-positive questions. Checked the retained corpus only and prepared 152 additional candidates with source/provenance links. They are blank and unjudged; no relevance labels, identities, timestamps, declarations, confidence, or evidence notes were fabricated.
 
 **Pending:** A real independent reviewer must use the v3 follow-up workbook to correct or exclude invalid questions, add metadata/evidence for the existing labels, and judge the additional candidates. ESP-08, ESP-11, and ESP-13 need full source-context review. No Stage 15 pooling, development tuning, or final-test evaluation is allowed.
+
+## 2026-10-21 — Exploratory protocol amendment and eligibility freeze
+
+**Progress:** The project is now explicitly an author-annotated exploratory
+study, not an independently reviewed confirmatory benchmark. The original
+protocol and review history are preserved. Before any Phase 2 retrieval run, a
+strict source-evidence policy froze 30 eligible CVE queries: 12 development and
+18 held-out test, with 32 source-evidenced author positives.
+
+**How:** The audit kept all original author labels immutable (102 `1`, 171 `0`).
+It retained a positive in derived exploratory qrels only when its full pinned
+raw source contains the requested target. Seventy author-positive labels become
+`unknown` only in the derived qrels; they are not changed to negatives. Two
+target-containing CVE cross-references remain positive. Forty queries were
+excluded before retrieval because they were author-invalid or lacked an
+evidence-supported author positive. The 152 additional candidates remain
+unjudged and are not ground truth.
+
+**Next:** Verify the frozen subset, then run the predeclared development-only
+weight grid. All Phase 2 outputs will be reported as exploratory and will state
+the author-label and coverage limitations.

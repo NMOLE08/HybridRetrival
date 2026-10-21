@@ -77,3 +77,8 @@
 - A derived v3 copy maps the submitted question decisions to `yes`/`no` without changing their meaning. The original workbook is not modified, and all 273 submitted pair labels are preserved exactly.
 - Macro-name matching against the retained pinned corpus can prepare review leads but cannot create a relevance label. The 152 added candidates remain blank/unjudged; source-context cases and unsupported needs require explicit human correction, exclusion, or new versioned evidence.
 - Reviewer pseudonym, independence declaration, actual UTC time, confidence, source-specific reason, and uncertainty must be supplied by a genuine independent reviewer. Blank metadata is not repaired by automation. The Stage 15/16/17 gates remain blocked.
+
+## 2026-10-21 — Exploratory amendment and conservative evidence subset
+- The user explicitly authorized replacing the unavailable independent-review gate with an author-annotated exploratory protocol. Preserve the old protocol and state the amendment date, timing, and scope in every relevant report.
+- Freeze only queries with author validity `yes` and an author-positive pair whose pinned raw source contains the target. This produced 30 CVE-only queries (12 dev, 18 test) and 32 positives before any Phase 2 ranking. The resulting family imbalance is a limitation, not a result to repair using retrieval output.
+- Preserve all original labels. In derived qrels, author-positive pairs without target evidence are `unknown`; this avoids treating suspicious positives as negatives. Retain author `0` labels as author-produced negatives and disclose their incomplete coverage. The 152 unjudged follow-up candidates are excluded from qrels.

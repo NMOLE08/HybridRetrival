@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "queries": 30,
+  "dev_queries": 12,
+  "test_queries": 18,
+  "qrels": 93,
+  "positives": 32,
+  "queries_without_positive": [],
+  "errors": [],
+  "limitations": [
+    "Author annotations are not independently verified.",
+    "Unjudged candidates remain unknown.",
+    "Excluded queries can only be recovered by a new versioned author adjudication."
+  ]
+}

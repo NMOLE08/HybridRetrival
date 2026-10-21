@@ -1,0 +1,38 @@
+{
+  "dataset_version": "phase2_exploratory_v1",
+  "label_origin": "project_author; not independently verified",
+  "corpus_path": "data/phase2/corpus.jsonl",
+  "corpus_sha256": "11705c15651669278699f3a0e9e95ba7c98dab2c73f430cd21f8a87cbec50852",
+  "included_queries": 30,
+  "included_dev_queries": 12,
+  "included_test_queries": 18,
+  "excluded_queries": 40,
+  "all_questions": 70,
+  "original_pairs": 273,
+  "original_author_labels": {
+    "0": 171,
+    "1": 102
+  },
+  "source_evidenced_author_positives": 32,
+  "derived_qrels": {
+    "0": 4,
+    "1": 32,
+    "unknown": 57
+  },
+  "excluded_by_reason": {
+    "no author positive with retained raw-source target evidence": 24,
+    "author question decision is no": 16
+  },
+  "unresolved_additional_candidates": 152,
+  "files": {
+    "queries_dev.jsonl": "d11677d02a256d7fe331b39100ebfa45515c86f5ceb725ad6e17db8da19da21d",
+    "queries_test.jsonl": "e1261fd7d3785ddaa3a30b1dfbc96c823c090074a786666d6dc9cda690dc98dd",
+    "qrels.csv": "ed9fae0ca9f971d9d8850523503b9653a10da4a70e48a3828f6bedd5a25193b4"
+  },
+  "selection_rule": "No retrieval output was read. Eligibility requires author validity yes plus an author-positive source whose pinned raw record contains the query target.",
+  "limitations": [
+    "Author annotations are not independently verified.",
+    "Unjudged candidates remain unknown.",
+    "Excluded queries can only be recovered by a new versioned author adjudication."
+  ]
+}
