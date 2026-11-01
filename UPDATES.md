@@ -143,3 +143,11 @@ the held-out 18-query exploratory test exactly once with the saved configuration
 **Verification:** The built-in LaTeX compiler was invoked, but Windows sandbox process creation failed before it could process the source. No PDF is claimed. The paper source, compile instructions, and exact diagnostic are saved under `paper/phase2_ieee_exploratory/` and `outputs/phase2/stage19/`.
 
 **Status:** Stages 15--19 are complete under the explicitly amended exploratory protocol. The study remains author-annotated and exploratory; it is not independently reviewed or confirmatory.
+
+## 2026-11-01 — Local interactive demo added
+
+**Progress:** Added a compact local web interface for showcasing the actual Phase 2 retrieval pipeline. It searches the 150 source-attributed documents through TF-IDF, the cached pretrained MiniLM model, RRF, and the frozen identifier-aware reranker in one view. The final column shows identifier matches, conflicts, score adjustment, and movement relative to RRF, with direct source links.
+
+**Verification:** A live query for `CVE-2023-46747` returned the source passage at TF-IDF rank 1, RRF rank 4, and identifier-aware rank 1. The server reported the expected 150-document corpus and cached model. This is an interactive demonstration of the saved implementation, not a new effectiveness experiment.
+
+**Use:** Run `.\\.venv\\Scripts\\python.exe scripts\\run_phase2_demo.py`, then open `http://127.0.0.1:8765`. The demo includes the same author-annotation limitation notice as the paper. See `docs/DEMO_GUIDE.md`.

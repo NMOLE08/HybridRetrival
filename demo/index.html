@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10253f">
+  <title>Identifier-Preserving Retrieval Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">LIVE LOCAL DEMO · PHASE 2 EXPLORATORY STUDY</p>
+      <h1>Technical search with identifier-aware reranking</h1>
+      <p class="lede">Compare the real TF-IDF, MiniLM, RRF, and frozen identifier-aware rankings from this research project.</p>
+      <p class="disclosure">Author-annotated exploratory dataset. Results are not independently validated.</p>
+    </header>
+    <section class="search-panel" aria-label="Search">
+      <label for="query">Technical query</label>
+      <div class="search-row">
+        <input id="query" value="What product and weakness are associated with CVE-2023-46747?" maxlength="600">
+        <button id="search">Run live retrieval</button>
+      </div>
+      <div class="samples">
+        <button class="sample" data-query="What product and weakness are associated with CVE-2023-46747?">CVE-2023-46747</button>
+        <button class="sample" data-query="What Apache HTTP Server path traversal is associated with CVE-2021-41773?">Apache path traversal</button>
+        <button class="sample" data-query="What Linux memory handling race is identified as CVE-2016-5195?">Dirty COW</button>
+      </div>
+      <p id="status" role="status">Loading the locally cached model…</p>
+    </section>
+    <section id="config" class="config" hidden></section>
+    <section id="results" class="results" aria-live="polite"></section>
+    <section class="how">
+      <h2>What to explain in the showcase</h2>
+      <ol>
+        <li>All systems search the same 150 source-attributed documents.</li>
+        <li>RRF combines lexical and dense ranks; it is the transparent hybrid baseline.</li>
+        <li>The final method applies a small penalty only when an explicit conflicting identifier is detected.</li>
+        <li>Open a source link to demonstrate provenance. The paper documents dataset and annotation limitations.</li>
+      </ol>
+    </section>
+  </main>
+  <template id="card">
+    <article class="method-card">
+      <div class="method-heading"><h2></h2><span></span></div>
+      <div class="rows"></div>
+    </article>
+  </template>
+  <script src="app.js"></script>
+</body>
+</html>

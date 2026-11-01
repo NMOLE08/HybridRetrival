@@ -237,3 +237,11 @@
 - Status: SOURCE COMPLETE; PDF compilation environment-blocked. Added `paper/phase2_ieee_exploratory/main.tex` using the IEEEtran conference class, with the experimental protocol, equations, architecture and data flow, tables, results, ablation, timing, limitations, and verifiable references. Results are traceable to Stage 15--18 saved outputs.
 - Verification: invoked the built-in compiler. Windows sandbox returned access denied while spawning Tectonic before source processing; no PDF success is claimed. The source has an accompanying compile note and diagnostic JSON. Existing automated tests and dataset validation remain the code/data checks.
 - Final limitation: the paper is a small, CVE-only author-annotated exploratory empirical study. It cannot be represented as an independently labeled benchmark, statistically powered general claim, or evidence for ESP32/natural-query generalization.
+
+### Project showcase — local interactive retrieval demo
+- Status: PASS (presentation artifact; not a new experimental stage).
+- Date/time: 2026-11-01 (Asia/Kolkata).
+- Work completed: Added a localhost-only interface that invokes the repository's actual Phase 2 TF-IDF, cached MiniLM, RRF, and frozen identifier-aware reranking code over the 150-document source-attributed corpus. It exposes query-specific rank changes and source links for a short research presentation.
+- Verification: health endpoint returned 150 documents and a cached model. For the default `CVE-2023-46747` query, the actual source document ranked 1 with TF-IDF, 4 with RRF, and 1 after identifier-aware reranking. The interface displays the frozen `match=0`, `conflict=0.003`, and `RRF k=60` configuration.
+- Evidence: `src/iphr/demo_server.py`, `scripts/run_phase2_demo.py`, `demo/`, and `docs/DEMO_GUIDE.md`.
+- Limitation: the interface is a local demonstrator, not a hosted production system or a source of new experimental measurements. Its author-annotated exploratory-data disclaimer is always shown.

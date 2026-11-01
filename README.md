@@ -38,3 +38,13 @@ python -m iphr.cli search --query 'ESP32-S3 Wi-Fi CSI' --method proposed --top-k
 ```
 
 The reproduction command creates a new run in ignored `cache/reproductions/`, compares its ranking and metrics with the stored reference, and generates figures without overwriting the original outputs. `outputs/final/` contains the recorded rankings, judgments-derived summaries, confidence intervals and timing samples; `outputs/figures/` and `outputs/tables/` contain the paper artifacts. See the handoff for source rebuilding, hashes, and the optional SciFact check.
+
+## Local live demo
+
+For a short project demonstration, run the local interface with the repository virtual environment:
+
+```powershell
+.\.venv\Scripts\python.exe scripts\run_phase2_demo.py
+```
+
+Then open `http://127.0.0.1:8765`. It runs the actual Phase 2 corpus, TF-IDF, cached pretrained MiniLM, RRF, and the frozen identifier-aware reranker; it does not replay saved results. The interface clearly states that the dataset is author-annotated and exploratory. See [the presenter guide](docs/DEMO_GUIDE.md) for a concise walkthrough.
