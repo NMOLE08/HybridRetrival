@@ -10,10 +10,9 @@
 <body>
   <main>
     <header>
-      <p class="eyebrow">LIVE LOCAL DEMO · PHASE 2 EXPLORATORY STUDY</p>
-      <h1>Technical search with identifier-aware reranking</h1>
-      <p class="lede">Compare the real TF-IDF, MiniLM, RRF, and frozen identifier-aware rankings from this research project.</p>
-      <p class="disclosure">Author-annotated exploratory dataset. Results are not independently validated.</p>
+      <p class="eyebrow">PHASE 2 EXPLORATORY RESEARCH</p>
+      <h1>Identifier-Aware Technical Search</h1>
+      <p class="disclosure">Author-annotated exploratory study · not independently validated</p>
     </header>
     <section class="search-panel" aria-label="Search">
       <label for="query">Technical query</label>
@@ -30,15 +29,6 @@
     </section>
     <section id="config" class="config" hidden></section>
     <section id="results" class="results" aria-live="polite"></section>
-    <section class="how">
-      <h2>What to explain in the showcase</h2>
-      <ol>
-        <li>All systems search the same 150 source-attributed documents.</li>
-        <li>RRF combines lexical and dense ranks; it is the transparent hybrid baseline.</li>
-        <li>The final method applies a small penalty only when an explicit conflicting identifier is detected.</li>
-        <li>Open a source link to demonstrate provenance. The paper documents dataset and annotation limitations.</li>
-      </ol>
-    </section>
   </main>
   <template id="card">
     <article class="method-card">
